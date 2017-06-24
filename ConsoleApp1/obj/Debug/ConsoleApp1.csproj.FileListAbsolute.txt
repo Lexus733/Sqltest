@@ -1,0 +1,16 @@
+C:\Users\Dmitriy\Desktop\sqltest\ConsoleApp1\ConsoleApp1\bin\Debug\Database1.mdf
+C:\Users\Dmitriy\Desktop\sqltest\ConsoleApp1\ConsoleApp1\bin\Debug\Database1_log.ldf
+C:\Users\Dmitriy\Desktop\sqltest\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+C:\Users\Dmitriy\Desktop\sqltest\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+C:\Users\Dmitriy\Desktop\sqltest\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+C:\Users\Dmitriy\Desktop\sqltest\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csprojResolveAssemblyReference.cache
+C:\Users\Dmitriy\Desktop\sqltest\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+C:\Users\Dmitriy\Desktop\sqltest\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
+C:\Users\Dmitriy\Desktop\sqltest-master\ConsoleApp1\bin\Debug\Database1.mdf
+C:\Users\Dmitriy\Desktop\sqltest-master\ConsoleApp1\bin\Debug\Database1_log.ldf
+C:\Users\Dmitriy\Desktop\sqltest-master\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+C:\Users\Dmitriy\Desktop\sqltest-master\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+C:\Users\Dmitriy\Desktop\sqltest-master\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+C:\Users\Dmitriy\Desktop\sqltest-master\ConsoleApp1\obj\Debug\ConsoleApp1.csprojResolveAssemblyReference.cache
+C:\Users\Dmitriy\Desktop\sqltest-master\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+C:\Users\Dmitriy\Desktop\sqltest-master\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
