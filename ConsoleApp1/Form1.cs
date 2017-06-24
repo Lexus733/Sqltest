@@ -13,30 +13,22 @@ namespace ConsoleApp1
     public partial class Form1 : Form
     {
         Program pr = new Program();
+        InventoryDAL dl = new InventoryDAL();
 
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void tableBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.tableBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.database1DataSet);
-        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           
-           
-
+             
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.tableTableAdapter.Fill(this.database1DataSet.Table);
-            this.table2TableAdapter.Fill(this.database1DataSet.Table2);
+            tableDataGridView.DataSource = dl.GetAllYableAsDataTable();
         }
 
     }

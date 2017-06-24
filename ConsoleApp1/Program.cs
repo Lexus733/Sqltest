@@ -42,12 +42,16 @@ namespace ConsoleApp1
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+           
 
         }
     }
 
     class InventoryDAL
     {
+        SqlDataAdapter dataAdapter;
+        BindingSource bd;
+
         public void InsertData(int id, string name, string city)
         {
             string sql = string.Format("INSERT INTO [Table]" +
@@ -141,6 +145,7 @@ namespace ConsoleApp1
                 { con.Close(); }
                 }
             }
+
         public DataTable GetAllYableAsDataTable()
         {
             DataTable table = new DataTable();
@@ -166,6 +171,5 @@ namespace ConsoleApp1
                 return table;
             }
         }
-
     }
     }
