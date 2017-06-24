@@ -13,3 +13,5 @@ C:\Users\Dmitriy\Desktop\sqltest-master\ConsoleApp1\bin\Debug\ConsoleApp1.exe
 C:\Users\Dmitriy\Desktop\sqltest-master\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
 C:\Users\Dmitriy\Desktop\sqltest-master\ConsoleApp1\obj\Debug\ConsoleApp1.exe
 C:\Users\Dmitriy\Desktop\sqltest-master\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
+C:\Users\Dmitriy\Desktop\Sqltest-master\ConsoleApp1\obj\Debug\ConsoleApp1.Form1.resources
+C:\Users\Dmitriy\Desktop\Sqltest-master\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.GenerateResource.Cache

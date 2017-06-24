@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 
 namespace ConsoleApp1
@@ -12,7 +13,7 @@ namespace ConsoleApp1
     class Program
     {
         static void Main(string[] args)
-        {
+        {        
             InventoryDAL inv = new InventoryDAL();
             int id;
             Int32.TryParse(Console.ReadLine(), out id);
@@ -37,6 +38,11 @@ namespace ConsoleApp1
             inv.InsertData(id3, name3, city3);
             inv.ChangeData(1, "Andrey");
             inv.DeleteData(deletingId);
+
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Form1());
+
         }
     }
 
@@ -50,7 +56,7 @@ namespace ConsoleApp1
             using (SqlConnection con = new SqlConnection(
            ConsoleApp1.Properties.Settings.Default.Database1ConnectionString))
             {
-              
+
                 try
                 {
                     con.Open();
@@ -160,5 +166,6 @@ namespace ConsoleApp1
                 return table;
             }
         }
+
     }
     }
