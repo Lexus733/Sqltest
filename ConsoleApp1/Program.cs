@@ -29,11 +29,14 @@ namespace ConsoleApp1
             string name3 = "Dima";
             string city3 = "Ulyanovsk";
 
-            inv.InsertData(id, name, city);
+            int deletingId;
+            Int32.TryParse(Console.ReadLine(),out deletingId);
+
+            inv.InsertData(id, name, city);        
             inv.InsertData(id2, name2, city2);
             inv.InsertData(id3, name3, city3);
             inv.ChangeData(1, "Andrey");
-            inv.DeleteData(2);
+            inv.DeleteData(deletingId);
         }
     }
 
@@ -54,7 +57,7 @@ namespace ConsoleApp1
                     using (SqlCommand cmd = new SqlCommand(sql, con))
                     {
                         SqlParameter param = new SqlParameter();
-                        param.ParameterName = "@ID";
+                        param.ParameterName = "@Id";
                         param.Value = id;
                         param.SqlDbType = SqlDbType.Int;
                         cmd.Parameters.Add(param);
@@ -132,5 +135,30 @@ namespace ConsoleApp1
                 { con.Close(); }
                 }
             }
+        public DataTable GetAllYableAsDataTable()
+        {
+            DataTable table = new DataTable();
+            string sql = "SELECT * FROM [Table]";
+            using (SqlConnection con = new SqlConnection(
+              ConsoleApp1.Properties.Settings.Default.Database1ConnectionString))
+            {
+                try
+                {
+                    con.Open();
+                    using (SqlCommand cmd = new SqlCommand(sql, con))
+                    {
+                        SqlDataReader dr = cmd.ExecuteReader();
+                        table.Load(dr);
+                        dr.Close();
+                    }
+                }
+                catch (SqlException ex)
+                { }
+                finally
+                { con.Close(); }
+
+                return table;
+            }
         }
+    }
     }
