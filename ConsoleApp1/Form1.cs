@@ -28,7 +28,8 @@ namespace ConsoleApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            tableDataGridView.DataSource = dl.GetAllYableAsDataTable();
+            tableDataGridView.DataSource = dl.GetAllYableAsDataTable("Crew");
+            dataGridView1.DataSource = dl.GetAllYableAsDataTable("Race");
         }
 
     }
