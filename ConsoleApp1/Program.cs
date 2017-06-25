@@ -26,14 +26,13 @@ namespace ConsoleApp1
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
-           
-
+          
         }
     }
 
     class InventoryDAL
     {
-        public void InsertData(int id, string name, string city, DateTime date)
+/*        public void InsertData(int id, string name, string city, DateTime date)
         {
             string sql = string.Format("INSERT INTO [Table]" +
                "([Id], [Name], [City],[Date]) Values(@Id,@Name,@City,@Date)");
@@ -56,8 +55,8 @@ namespace ConsoleApp1
                         param = new SqlParameter();
                         param.ParameterName = "@Name";
                         param.Value = name;
-                        param.SqlDbType = SqlDbType.Char;
-                        param.Size = 10;
+                        param.SqlDbType = SqlDbType.VarChar;
+                        param.Size = 20;
                         cmd.Parameters.Add(param);
 
                         param = new SqlParameter();
@@ -82,7 +81,7 @@ namespace ConsoleApp1
                 finally
                   { con.Close(); }
             }
-        }
+        } */
         public void DeleteData(int id)
         {
             string sql = string.Format("DELETE FROM [Table] WHERE [Id] = '{0}'", id);
@@ -182,36 +181,36 @@ namespace ConsoleApp1
                         param = new SqlParameter();
                         param.ParameterName = "@Drivers";
                         param.Value = drivers;
-                        param.SqlDbType = SqlDbType.Char;
-                        param.Size = 10;
+                        param.SqlDbType = SqlDbType.VarChar;
+                        param.Size = 50;
                         cmd.Parameters.Add(param);
 
                         param = new SqlParameter();
                         param.ParameterName = "@City";
                         param.Value = city;
-                        param.SqlDbType = SqlDbType.Char;
-                        param.Size = 10;
+                        param.SqlDbType = SqlDbType.VarChar;
+                        param.Size = 50;
                         cmd.Parameters.Add(param);
 
                         param = new SqlParameter();
                         param.ParameterName = "@Car";
                         param.Value = car;
-                        param.SqlDbType = SqlDbType.Char;
-                        param.Size = 10;
+                        param.SqlDbType = SqlDbType.VarChar;
+                        param.Size = 50;
                         cmd.Parameters.Add(param);
 
                         param = new SqlParameter();
                         param.ParameterName = "@Group";
                         param.Value = group;
-                        param.SqlDbType = SqlDbType.Char;
-                        param.Size = 10;
+                        param.SqlDbType = SqlDbType.VarChar;
+                        param.Size = 50;
                         cmd.Parameters.Add(param);
 
                         param = new SqlParameter();
                         param.ParameterName = "@CarClass";
                         param.Value = carClass;
-                        param.SqlDbType = SqlDbType.Char;
-                        param.Size = 10;
+                        param.SqlDbType = SqlDbType.VarChar;
+                        param.Size = 50;
                         cmd.Parameters.Add(param);
 
                         cmd.ExecuteNonQuery();
@@ -246,7 +245,8 @@ namespace ConsoleApp1
                         param = new SqlParameter();
                         param.ParameterName = "@Title";
                         param.Value = title;
-                        param.SqlDbType = SqlDbType.Char;
+                        param.SqlDbType = SqlDbType.VarChar;
+                        param.Size = 50;
                         cmd.Parameters.Add(param);
 
                         param = new SqlParameter();
@@ -353,5 +353,5 @@ namespace ConsoleApp1
       public int penaltyKP = Int32.Parse(Console.ReadLine()); // штраф за пропуск КП
       public int penaltyKS = Int32.Parse(Console.ReadLine()); // штраф за пропуск КС
     }
-
+    
 }
