@@ -572,19 +572,12 @@ namespace ConsoleApp1 {
                                 this.columnСтартовый_номер}, true));
                 this.columnСтартовый_номер.AllowDBNull = false;
                 this.columnСтартовый_номер.Unique = true;
-                this.columnВодитель.AllowDBNull = false;
                 this.columnВодитель.MaxLength = 50;
-                this.columnГород_водителя.AllowDBNull = false;
                 this.columnГород_водителя.MaxLength = 50;
-                this.columnШтурман.AllowDBNull = false;
                 this.columnШтурман.MaxLength = 50;
-                this.columnГород_штурмана.AllowDBNull = false;
                 this.columnГород_штурмана.MaxLength = 50;
-                this.columnАвтомобиль.AllowDBNull = false;
                 this.columnАвтомобиль.MaxLength = 50;
-                this.columnЗачетная_группа.AllowDBNull = false;
                 this.columnЗачетная_группа.MaxLength = 50;
-                this.columnКласс.AllowDBNull = false;
                 this.columnКласс.MaxLength = 50;
             }
             
@@ -970,16 +963,7 @@ namespace ConsoleApp1 {
                                 this.columnId}, true));
                 this.columnId.AllowDBNull = false;
                 this.columnId.Unique = true;
-                this.columnНазвание_гонки.AllowDBNull = false;
                 this.columnНазвание_гонки.MaxLength = 50;
-                this.columnДата_начала.AllowDBNull = false;
-                this.columnДата_окончания.AllowDBNull = false;
-                this.columnКоэфф_очков.AllowDBNull = false;
-                this.columnКол_СУ.AllowDBNull = false;
-                this.columnШтраф_за_опоздание.AllowDBNull = false;
-                this.columnШтраф_за_задержку.AllowDBNull = false;
-                this.columnШтраф_за_пропуск_КП.AllowDBNull = false;
-                this.columnШтраф_за_пропуск_КС.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1480,7 +1464,12 @@ namespace ConsoleApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string Водитель {
                 get {
-                    return ((string)(this[this.tableCrew.ВодительColumn]));
+                    try {
+                        return ((string)(this[this.tableCrew.ВодительColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Водитель\' в таблице \'Crew\' равно DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableCrew.ВодительColumn] = value;
@@ -1491,7 +1480,12 @@ namespace ConsoleApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string Город_водителя {
                 get {
-                    return ((string)(this[this.tableCrew.Город_водителяColumn]));
+                    try {
+                        return ((string)(this[this.tableCrew.Город_водителяColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Город водителя\' в таблице \'Crew\' равно DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableCrew.Город_водителяColumn] = value;
@@ -1502,7 +1496,12 @@ namespace ConsoleApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string Штурман {
                 get {
-                    return ((string)(this[this.tableCrew.ШтурманColumn]));
+                    try {
+                        return ((string)(this[this.tableCrew.ШтурманColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Штурман\' в таблице \'Crew\' равно DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableCrew.ШтурманColumn] = value;
@@ -1513,7 +1512,12 @@ namespace ConsoleApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string Город_штурмана {
                 get {
-                    return ((string)(this[this.tableCrew.Город_штурманаColumn]));
+                    try {
+                        return ((string)(this[this.tableCrew.Город_штурманаColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Город штурмана\' в таблице \'Crew\' равно DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableCrew.Город_штурманаColumn] = value;
@@ -1524,7 +1528,12 @@ namespace ConsoleApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string Автомобиль {
                 get {
-                    return ((string)(this[this.tableCrew.АвтомобильColumn]));
+                    try {
+                        return ((string)(this[this.tableCrew.АвтомобильColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Автомобиль\' в таблице \'Crew\' равно DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableCrew.АвтомобильColumn] = value;
@@ -1535,7 +1544,12 @@ namespace ConsoleApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string Зачетная_группа {
                 get {
-                    return ((string)(this[this.tableCrew.Зачетная_группаColumn]));
+                    try {
+                        return ((string)(this[this.tableCrew.Зачетная_группаColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Зачетная группа\' в таблице \'Crew\' равно DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableCrew.Зачетная_группаColumn] = value;
@@ -1546,11 +1560,100 @@ namespace ConsoleApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string Класс {
                 get {
-                    return ((string)(this[this.tableCrew.КлассColumn]));
+                    try {
+                        return ((string)(this[this.tableCrew.КлассColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Класс\' в таблице \'Crew\' равно DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableCrew.КлассColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsВодительNull() {
+                return this.IsNull(this.tableCrew.ВодительColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetВодительNull() {
+                this[this.tableCrew.ВодительColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsГород_водителяNull() {
+                return this.IsNull(this.tableCrew.Город_водителяColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetГород_водителяNull() {
+                this[this.tableCrew.Город_водителяColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsШтурманNull() {
+                return this.IsNull(this.tableCrew.ШтурманColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetШтурманNull() {
+                this[this.tableCrew.ШтурманColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsГород_штурманаNull() {
+                return this.IsNull(this.tableCrew.Город_штурманаColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetГород_штурманаNull() {
+                this[this.tableCrew.Город_штурманаColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsАвтомобильNull() {
+                return this.IsNull(this.tableCrew.АвтомобильColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetАвтомобильNull() {
+                this[this.tableCrew.АвтомобильColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsЗачетная_группаNull() {
+                return this.IsNull(this.tableCrew.Зачетная_группаColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetЗачетная_группаNull() {
+                this[this.tableCrew.Зачетная_группаColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsКлассNull() {
+                return this.IsNull(this.tableCrew.КлассColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetКлассNull() {
+                this[this.tableCrew.КлассColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1583,7 +1686,12 @@ namespace ConsoleApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string Название_гонки {
                 get {
-                    return ((string)(this[this.tableRace.Название_гонкиColumn]));
+                    try {
+                        return ((string)(this[this.tableRace.Название_гонкиColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Название гонки\' в таблице \'Race\' равно DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableRace.Название_гонкиColumn] = value;
@@ -1594,7 +1702,12 @@ namespace ConsoleApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public System.DateTime Дата_начала {
                 get {
-                    return ((global::System.DateTime)(this[this.tableRace.Дата_началаColumn]));
+                    try {
+                        return ((global::System.DateTime)(this[this.tableRace.Дата_началаColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Дата начала\' в таблице \'Race\' равно DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableRace.Дата_началаColumn] = value;
@@ -1605,7 +1718,12 @@ namespace ConsoleApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public System.DateTime Дата_окончания {
                 get {
-                    return ((global::System.DateTime)(this[this.tableRace.Дата_окончанияColumn]));
+                    try {
+                        return ((global::System.DateTime)(this[this.tableRace.Дата_окончанияColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Дата окончания\' в таблице \'Race\' равно DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableRace.Дата_окончанияColumn] = value;
@@ -1616,7 +1734,12 @@ namespace ConsoleApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public double Коэфф_очков {
                 get {
-                    return ((double)(this[this.tableRace.Коэфф_очковColumn]));
+                    try {
+                        return ((double)(this[this.tableRace.Коэфф_очковColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Коэфф очков\' в таблице \'Race\' равно DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableRace.Коэфф_очковColumn] = value;
@@ -1627,7 +1750,12 @@ namespace ConsoleApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int Кол_СУ {
                 get {
-                    return ((int)(this[this.tableRace.Кол_СУColumn]));
+                    try {
+                        return ((int)(this[this.tableRace.Кол_СУColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Кол СУ\' в таблице \'Race\' равно DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableRace.Кол_СУColumn] = value;
@@ -1638,7 +1766,12 @@ namespace ConsoleApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int Штраф_за_опоздание {
                 get {
-                    return ((int)(this[this.tableRace.Штраф_за_опозданиеColumn]));
+                    try {
+                        return ((int)(this[this.tableRace.Штраф_за_опозданиеColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Штраф за опоздание\' в таблице \'Race\' равно DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableRace.Штраф_за_опозданиеColumn] = value;
@@ -1649,7 +1782,12 @@ namespace ConsoleApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int Штраф_за_задержку {
                 get {
-                    return ((int)(this[this.tableRace.Штраф_за_задержкуColumn]));
+                    try {
+                        return ((int)(this[this.tableRace.Штраф_за_задержкуColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Штраф за задержку\' в таблице \'Race\' равно DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableRace.Штраф_за_задержкуColumn] = value;
@@ -1660,7 +1798,12 @@ namespace ConsoleApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int Штраф_за_пропуск_КП {
                 get {
-                    return ((int)(this[this.tableRace.Штраф_за_пропуск_КПColumn]));
+                    try {
+                        return ((int)(this[this.tableRace.Штраф_за_пропуск_КПColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Штраф за пропуск КП\' в таблице \'Race\' равно DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableRace.Штраф_за_пропуск_КПColumn] = value;
@@ -1671,11 +1814,124 @@ namespace ConsoleApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int Штраф_за_пропуск_КС {
                 get {
-                    return ((int)(this[this.tableRace.Штраф_за_пропуск_КСColumn]));
+                    try {
+                        return ((int)(this[this.tableRace.Штраф_за_пропуск_КСColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Штраф за пропуск КС\' в таблице \'Race\' равно DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableRace.Штраф_за_пропуск_КСColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsНазвание_гонкиNull() {
+                return this.IsNull(this.tableRace.Название_гонкиColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetНазвание_гонкиNull() {
+                this[this.tableRace.Название_гонкиColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsДата_началаNull() {
+                return this.IsNull(this.tableRace.Дата_началаColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetДата_началаNull() {
+                this[this.tableRace.Дата_началаColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsДата_окончанияNull() {
+                return this.IsNull(this.tableRace.Дата_окончанияColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetДата_окончанияNull() {
+                this[this.tableRace.Дата_окончанияColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsКоэфф_очковNull() {
+                return this.IsNull(this.tableRace.Коэфф_очковColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetКоэфф_очковNull() {
+                this[this.tableRace.Коэфф_очковColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsКол_СУNull() {
+                return this.IsNull(this.tableRace.Кол_СУColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetКол_СУNull() {
+                this[this.tableRace.Кол_СУColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsШтраф_за_опозданиеNull() {
+                return this.IsNull(this.tableRace.Штраф_за_опозданиеColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetШтраф_за_опозданиеNull() {
+                this[this.tableRace.Штраф_за_опозданиеColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsШтраф_за_задержкуNull() {
+                return this.IsNull(this.tableRace.Штраф_за_задержкуColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetШтраф_за_задержкуNull() {
+                this[this.tableRace.Штраф_за_задержкуColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsШтраф_за_пропуск_КПNull() {
+                return this.IsNull(this.tableRace.Штраф_за_пропуск_КПColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetШтраф_за_пропуск_КПNull() {
+                this[this.tableRace.Штраф_за_пропуск_КПColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsШтраф_за_пропуск_КСNull() {
+                return this.IsNull(this.tableRace.Штраф_за_пропуск_КСColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetШтраф_за_пропуск_КСNull() {
+                this[this.tableRace.Штраф_за_пропуск_КСColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -2122,43 +2378,43 @@ SELECT [Стартовый номер], Водитель, [Город водит
         public virtual int Delete(int Original_Стартовый_номер, string Original_Водитель, string Original_Город_водителя, string Original_Штурман, string Original_Город_штурмана, string Original_Автомобиль, string Original_Зачетная_группа, string Original_Класс) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Стартовый_номер));
             if ((Original_Водитель == null)) {
-                throw new global::System.ArgumentNullException("Original_Водитель");
+                this.Adapter.DeleteCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Водитель));
             }
             if ((Original_Город_водителя == null)) {
-                throw new global::System.ArgumentNullException("Original_Город_водителя");
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Город_водителя));
             }
             if ((Original_Штурман == null)) {
-                throw new global::System.ArgumentNullException("Original_Штурман");
+                this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_Штурман));
             }
             if ((Original_Город_штурмана == null)) {
-                throw new global::System.ArgumentNullException("Original_Город_штурмана");
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Город_штурмана));
             }
             if ((Original_Автомобиль == null)) {
-                throw new global::System.ArgumentNullException("Original_Автомобиль");
+                this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_Автомобиль));
             }
             if ((Original_Зачетная_группа == null)) {
-                throw new global::System.ArgumentNullException("Original_Зачетная_группа");
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_Зачетная_группа));
             }
             if ((Original_Класс == null)) {
-                throw new global::System.ArgumentNullException("Original_Класс");
+                this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((string)(Original_Класс));
@@ -2186,43 +2442,43 @@ SELECT [Стартовый номер], Водитель, [Город водит
         public virtual int Insert(int Стартовый_номер, string Водитель, string Город_водителя, string Штурман, string Город_штурмана, string Автомобиль, string Зачетная_группа, string Класс) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Стартовый_номер));
             if ((Водитель == null)) {
-                throw new global::System.ArgumentNullException("Водитель");
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Водитель));
             }
             if ((Город_водителя == null)) {
-                throw new global::System.ArgumentNullException("Город_водителя");
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Город_водителя));
             }
             if ((Штурман == null)) {
-                throw new global::System.ArgumentNullException("Штурман");
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Штурман));
             }
             if ((Город_штурмана == null)) {
-                throw new global::System.ArgumentNullException("Город_штурмана");
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Город_штурмана));
             }
             if ((Автомобиль == null)) {
-                throw new global::System.ArgumentNullException("Автомобиль");
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.InsertCommand.Parameters[5].Value = ((string)(Автомобиль));
             }
             if ((Зачетная_группа == null)) {
-                throw new global::System.ArgumentNullException("Зачетная_группа");
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.InsertCommand.Parameters[6].Value = ((string)(Зачетная_группа));
             }
             if ((Класс == null)) {
-                throw new global::System.ArgumentNullException("Класс");
+                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.InsertCommand.Parameters[7].Value = ((string)(Класс));
@@ -2266,86 +2522,86 @@ SELECT [Стартовый номер], Водитель, [Город водит
                     string Original_Класс) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Стартовый_номер));
             if ((Водитель == null)) {
-                throw new global::System.ArgumentNullException("Водитель");
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Водитель));
             }
             if ((Город_водителя == null)) {
-                throw new global::System.ArgumentNullException("Город_водителя");
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Город_водителя));
             }
             if ((Штурман == null)) {
-                throw new global::System.ArgumentNullException("Штурман");
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Штурман));
             }
             if ((Город_штурмана == null)) {
-                throw new global::System.ArgumentNullException("Город_штурмана");
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Город_штурмана));
             }
             if ((Автомобиль == null)) {
-                throw new global::System.ArgumentNullException("Автомобиль");
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Автомобиль));
             }
             if ((Зачетная_группа == null)) {
-                throw new global::System.ArgumentNullException("Зачетная_группа");
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Зачетная_группа));
             }
             if ((Класс == null)) {
-                throw new global::System.ArgumentNullException("Класс");
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Класс));
             }
             this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_Стартовый_номер));
             if ((Original_Водитель == null)) {
-                throw new global::System.ArgumentNullException("Original_Водитель");
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_Водитель));
             }
             if ((Original_Город_водителя == null)) {
-                throw new global::System.ArgumentNullException("Original_Город_водителя");
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_Город_водителя));
             }
             if ((Original_Штурман == null)) {
-                throw new global::System.ArgumentNullException("Original_Штурман");
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_Штурман));
             }
             if ((Original_Город_штурмана == null)) {
-                throw new global::System.ArgumentNullException("Original_Город_штурмана");
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_Город_штурмана));
             }
             if ((Original_Автомобиль == null)) {
-                throw new global::System.ArgumentNullException("Original_Автомобиль");
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_Автомобиль));
             }
             if ((Original_Зачетная_группа == null)) {
-                throw new global::System.ArgumentNullException("Original_Зачетная_группа");
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_Зачетная_группа));
             }
             if ((Original_Класс == null)) {
-                throw new global::System.ArgumentNullException("Original_Класс");
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_Класс));
@@ -2639,22 +2895,62 @@ SELECT Id, [Название гонки], [Дата начала], [Дата о�
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, string Original_Название_гонки, System.DateTime Original_Дата_начала, System.DateTime Original_Дата_окончания, double Original_Коэфф_очков, int Original_Кол_СУ, int Original_Штраф_за_опоздание, int Original_Штраф_за_задержку, int Original_Штраф_за_пропуск_КП, int Original_Штраф_за_пропуск_КС) {
+        public virtual int Delete(int Original_Id, string Original_Название_гонки, global::System.Nullable<global::System.DateTime> Original_Дата_начала, global::System.Nullable<global::System.DateTime> Original_Дата_окончания, global::System.Nullable<double> Original_Коэфф_очков, global::System.Nullable<int> Original_Кол_СУ, global::System.Nullable<int> Original_Штраф_за_опоздание, global::System.Nullable<int> Original_Штраф_за_задержку, global::System.Nullable<int> Original_Штраф_за_пропуск_КП, global::System.Nullable<int> Original_Штраф_за_пропуск_КС) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
             if ((Original_Название_гонки == null)) {
-                throw new global::System.ArgumentNullException("Original_Название_гонки");
+                this.Adapter.DeleteCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Название_гонки));
             }
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((System.DateTime)(Original_Дата_начала));
-            this.Adapter.DeleteCommand.Parameters[3].Value = ((System.DateTime)(Original_Дата_окончания));
-            this.Adapter.DeleteCommand.Parameters[4].Value = ((double)(Original_Коэфф_очков));
-            this.Adapter.DeleteCommand.Parameters[5].Value = ((int)(Original_Кол_СУ));
-            this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_Штраф_за_опоздание));
-            this.Adapter.DeleteCommand.Parameters[7].Value = ((int)(Original_Штраф_за_задержку));
-            this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_Штраф_за_пропуск_КП));
-            this.Adapter.DeleteCommand.Parameters[9].Value = ((int)(Original_Штраф_за_пропуск_КС));
+            if ((Original_Дата_начала.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((System.DateTime)(Original_Дата_начала.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Дата_окончания.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((System.DateTime)(Original_Дата_окончания.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Коэфф_очков.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((double)(Original_Коэфф_очков.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Кол_СУ.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((int)(Original_Кол_СУ.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Штраф_за_опоздание.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_Штраф_за_опоздание.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Штраф_за_задержку.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((int)(Original_Штраф_за_задержку.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Штраф_за_пропуск_КП.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_Штраф_за_пропуск_КП.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Штраф_за_пропуск_КС.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((int)(Original_Штраф_за_пропуск_КС.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -2675,22 +2971,62 @@ SELECT Id, [Название гонки], [Дата начала], [Дата о�
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int Id, string Название_гонки, System.DateTime Дата_начала, System.DateTime Дата_окончания, double Коэфф_очков, int Кол_СУ, int Штраф_за_опоздание, int Штраф_за_задержку, int Штраф_за_пропуск_КП, int Штраф_за_пропуск_КС) {
+        public virtual int Insert(int Id, string Название_гонки, global::System.Nullable<global::System.DateTime> Дата_начала, global::System.Nullable<global::System.DateTime> Дата_окончания, global::System.Nullable<double> Коэфф_очков, global::System.Nullable<int> Кол_СУ, global::System.Nullable<int> Штраф_за_опоздание, global::System.Nullable<int> Штраф_за_задержку, global::System.Nullable<int> Штраф_за_пропуск_КП, global::System.Nullable<int> Штраф_за_пропуск_КС) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Id));
             if ((Название_гонки == null)) {
-                throw new global::System.ArgumentNullException("Название_гонки");
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Название_гонки));
             }
-            this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(Дата_начала));
-            this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(Дата_окончания));
-            this.Adapter.InsertCommand.Parameters[4].Value = ((double)(Коэфф_очков));
-            this.Adapter.InsertCommand.Parameters[5].Value = ((int)(Кол_СУ));
-            this.Adapter.InsertCommand.Parameters[6].Value = ((int)(Штраф_за_опоздание));
-            this.Adapter.InsertCommand.Parameters[7].Value = ((int)(Штраф_за_задержку));
-            this.Adapter.InsertCommand.Parameters[8].Value = ((int)(Штраф_за_пропуск_КП));
-            this.Adapter.InsertCommand.Parameters[9].Value = ((int)(Штраф_за_пропуск_КС));
+            if ((Дата_начала.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(Дата_начала.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Дата_окончания.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(Дата_окончания.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((Коэфф_очков.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((double)(Коэфф_очков.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((Кол_СУ.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((int)(Кол_СУ.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((Штраф_за_опоздание.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((int)(Штраф_за_опоздание.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            if ((Штраф_за_задержку.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((int)(Штраф_за_задержку.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            if ((Штраф_за_пропуск_КП.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((int)(Штраф_за_пропуск_КП.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((Штраф_за_пропуск_КС.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((int)(Штраф_за_пропуск_КС.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -2714,54 +3050,134 @@ SELECT Id, [Название гонки], [Дата начала], [Дата о�
         public virtual int Update(
                     int Id, 
                     string Название_гонки, 
-                    System.DateTime Дата_начала, 
-                    System.DateTime Дата_окончания, 
-                    double Коэфф_очков, 
-                    int Кол_СУ, 
-                    int Штраф_за_опоздание, 
-                    int Штраф_за_задержку, 
-                    int Штраф_за_пропуск_КП, 
-                    int Штраф_за_пропуск_КС, 
+                    global::System.Nullable<global::System.DateTime> Дата_начала, 
+                    global::System.Nullable<global::System.DateTime> Дата_окончания, 
+                    global::System.Nullable<double> Коэфф_очков, 
+                    global::System.Nullable<int> Кол_СУ, 
+                    global::System.Nullable<int> Штраф_за_опоздание, 
+                    global::System.Nullable<int> Штраф_за_задержку, 
+                    global::System.Nullable<int> Штраф_за_пропуск_КП, 
+                    global::System.Nullable<int> Штраф_за_пропуск_КС, 
                     int Original_Id, 
                     string Original_Название_гонки, 
-                    System.DateTime Original_Дата_начала, 
-                    System.DateTime Original_Дата_окончания, 
-                    double Original_Коэфф_очков, 
-                    int Original_Кол_СУ, 
-                    int Original_Штраф_за_опоздание, 
-                    int Original_Штраф_за_задержку, 
-                    int Original_Штраф_за_пропуск_КП, 
-                    int Original_Штраф_за_пропуск_КС) {
+                    global::System.Nullable<global::System.DateTime> Original_Дата_начала, 
+                    global::System.Nullable<global::System.DateTime> Original_Дата_окончания, 
+                    global::System.Nullable<double> Original_Коэфф_очков, 
+                    global::System.Nullable<int> Original_Кол_СУ, 
+                    global::System.Nullable<int> Original_Штраф_за_опоздание, 
+                    global::System.Nullable<int> Original_Штраф_за_задержку, 
+                    global::System.Nullable<int> Original_Штраф_за_пропуск_КП, 
+                    global::System.Nullable<int> Original_Штраф_за_пропуск_КС) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Id));
             if ((Название_гонки == null)) {
-                throw new global::System.ArgumentNullException("Название_гонки");
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Название_гонки));
             }
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(Дата_начала));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(Дата_окончания));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((double)(Коэфф_очков));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Кол_СУ));
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Штраф_за_опоздание));
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Штраф_за_задержку));
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Штраф_за_пропуск_КП));
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Штраф_за_пропуск_КС));
+            if ((Дата_начала.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(Дата_начала.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Дата_окончания.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(Дата_окончания.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((Коэфф_очков.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((double)(Коэфф_очков.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((Кол_СУ.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Кол_СУ.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((Штраф_за_опоздание.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Штраф_за_опоздание.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            if ((Штраф_за_задержку.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Штраф_за_задержку.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            if ((Штраф_за_пропуск_КП.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Штраф_за_пропуск_КП.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((Штраф_за_пропуск_КС.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Штраф_за_пропуск_КС.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
             this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_Id));
             if ((Original_Название_гонки == null)) {
-                throw new global::System.ArgumentNullException("Original_Название_гонки");
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_Название_гонки));
             }
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((System.DateTime)(Original_Дата_начала));
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((System.DateTime)(Original_Дата_окончания));
-            this.Adapter.UpdateCommand.Parameters[14].Value = ((double)(Original_Коэфф_очков));
-            this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Original_Кол_СУ));
-            this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(Original_Штраф_за_опоздание));
-            this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(Original_Штраф_за_задержку));
-            this.Adapter.UpdateCommand.Parameters[18].Value = ((int)(Original_Штраф_за_пропуск_КП));
-            this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(Original_Штраф_за_пропуск_КС));
+            if ((Original_Дата_начала.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((System.DateTime)(Original_Дата_начала.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Дата_окончания.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((System.DateTime)(Original_Дата_окончания.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Коэфф_очков.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((double)(Original_Коэфф_очков.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Кол_СУ.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Original_Кол_СУ.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Штраф_за_опоздание.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(Original_Штраф_за_опоздание.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Штраф_за_задержку.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(Original_Штраф_за_задержку.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Штраф_за_пропуск_КП.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((int)(Original_Штраф_за_пропуск_КП.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Штраф_за_пропуск_КС.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(Original_Штраф_за_пропуск_КС.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -2784,24 +3200,24 @@ SELECT Id, [Название гонки], [Дата начала], [Дата о�
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(
                     string Название_гонки, 
-                    System.DateTime Дата_начала, 
-                    System.DateTime Дата_окончания, 
-                    double Коэфф_очков, 
-                    int Кол_СУ, 
-                    int Штраф_за_опоздание, 
-                    int Штраф_за_задержку, 
-                    int Штраф_за_пропуск_КП, 
-                    int Штраф_за_пропуск_КС, 
+                    global::System.Nullable<global::System.DateTime> Дата_начала, 
+                    global::System.Nullable<global::System.DateTime> Дата_окончания, 
+                    global::System.Nullable<double> Коэфф_очков, 
+                    global::System.Nullable<int> Кол_СУ, 
+                    global::System.Nullable<int> Штраф_за_опоздание, 
+                    global::System.Nullable<int> Штраф_за_задержку, 
+                    global::System.Nullable<int> Штраф_за_пропуск_КП, 
+                    global::System.Nullable<int> Штраф_за_пропуск_КС, 
                     int Original_Id, 
                     string Original_Название_гонки, 
-                    System.DateTime Original_Дата_начала, 
-                    System.DateTime Original_Дата_окончания, 
-                    double Original_Коэфф_очков, 
-                    int Original_Кол_СУ, 
-                    int Original_Штраф_за_опоздание, 
-                    int Original_Штраф_за_задержку, 
-                    int Original_Штраф_за_пропуск_КП, 
-                    int Original_Штраф_за_пропуск_КС) {
+                    global::System.Nullable<global::System.DateTime> Original_Дата_начала, 
+                    global::System.Nullable<global::System.DateTime> Original_Дата_окончания, 
+                    global::System.Nullable<double> Original_Коэфф_очков, 
+                    global::System.Nullable<int> Original_Кол_СУ, 
+                    global::System.Nullable<int> Original_Штраф_за_опоздание, 
+                    global::System.Nullable<int> Original_Штраф_за_задержку, 
+                    global::System.Nullable<int> Original_Штраф_за_пропуск_КП, 
+                    global::System.Nullable<int> Original_Штраф_за_пропуск_КС) {
             return this.Update(Original_Id, Название_гонки, Дата_начала, Дата_окончания, Коэфф_очков, Кол_СУ, Штраф_за_опоздание, Штраф_за_задержку, Штраф_за_пропуск_КП, Штраф_за_пропуск_КС, Original_Id, Original_Название_гонки, Original_Дата_начала, Original_Дата_окончания, Original_Коэфф_очков, Original_Кол_СУ, Original_Штраф_за_опоздание, Original_Штраф_за_задержку, Original_Штраф_за_пропуск_КП, Original_Штраф_за_пропуск_КС);
         }
     }
