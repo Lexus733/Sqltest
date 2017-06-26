@@ -14,18 +14,19 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Первые 6 значений относятся к команде");
-            InventoryDAL inv = new InventoryDAL();
-            Crew crew = new Crew();
-            Race race = new Race();
-            
-
-            inv.InsertCrew(crew.num,crew.drivers,crew.city,crew.car,crew.group,crew.carClass,"Crew");
-            inv.InsertRace(race.id,race.title,race.dateBegin,race.dateEnd,race.pointRate,race.countST,race.penaltyToLate,race.penaltyToHold,race.penaltyKP,race.penaltyKS,"Race");
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Form2());
+
+            InventoryDAL inv = new InventoryDAL();
+       //     Crew crew = new Crew();
+      //      Race race = new Race();
+            
+
+   //         inv.InsertCrew(crew.num,crew.drivers,crew.city,crew.car,crew.group,crew.carClass,"Crew");
+  //          inv.InsertRace(race.id,race.title,race.dateBegin,race.dateEnd,race.pointRate,race.countST,race.penaltyToLate,race.penaltyToHold,race.penaltyKP,race.penaltyKS,"Race");
+
           
         }
     }
@@ -110,7 +111,7 @@ namespace ConsoleApp1
             }
         }
 
-            public void ChangeData(int id, string newName)
+        public void ChangeData(int id, string newName)
             {
               string sql = string.Format("UPDATE [Table] SET [Name] = '{0}' WHERE [Id] = '{1}'",
                  newName, id);
@@ -309,7 +310,7 @@ namespace ConsoleApp1
 
     }
 
-    class Crew
+ /*   class Crew
     {
        public int num = Int32.Parse(Console.ReadLine()); // стартовый номер
        public string drivers = Console.ReadLine().ToString(); // водители
@@ -353,5 +354,5 @@ namespace ConsoleApp1
       public int penaltyKP = Int32.Parse(Console.ReadLine()); // штраф за пропуск КП
       public int penaltyKS = Int32.Parse(Console.ReadLine()); // штраф за пропуск КС
     }
-    
+    */
 }
