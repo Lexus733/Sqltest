@@ -349,17 +349,21 @@ namespace ConsoleApp1 {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class CrewDataTable : global::System.Data.TypedTableBase<CrewRow> {
             
-            private global::System.Data.DataColumn columnNum;
+            private global::System.Data.DataColumn columnСтартовый_номер;
             
-            private global::System.Data.DataColumn columnDrivers;
+            private global::System.Data.DataColumn columnВодитель;
             
-            private global::System.Data.DataColumn columnCity;
+            private global::System.Data.DataColumn columnГород_водителя;
             
-            private global::System.Data.DataColumn columnCar;
+            private global::System.Data.DataColumn columnШтурман;
             
-            private global::System.Data.DataColumn columnGroup;
+            private global::System.Data.DataColumn columnГород_штурмана;
             
-            private global::System.Data.DataColumn columnCarClass;
+            private global::System.Data.DataColumn columnАвтомобиль;
+            
+            private global::System.Data.DataColumn columnЗачетная_группа;
+            
+            private global::System.Data.DataColumn columnКласс;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -396,49 +400,65 @@ namespace ConsoleApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn NumColumn {
+            public global::System.Data.DataColumn Стартовый_номерColumn {
                 get {
-                    return this.columnNum;
+                    return this.columnСтартовый_номер;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn DriversColumn {
+            public global::System.Data.DataColumn ВодительColumn {
                 get {
-                    return this.columnDrivers;
+                    return this.columnВодитель;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn CityColumn {
+            public global::System.Data.DataColumn Город_водителяColumn {
                 get {
-                    return this.columnCity;
+                    return this.columnГород_водителя;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn CarColumn {
+            public global::System.Data.DataColumn ШтурманColumn {
                 get {
-                    return this.columnCar;
+                    return this.columnШтурман;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn GroupColumn {
+            public global::System.Data.DataColumn Город_штурманаColumn {
                 get {
-                    return this.columnGroup;
+                    return this.columnГород_штурмана;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn CarClassColumn {
+            public global::System.Data.DataColumn АвтомобильColumn {
                 get {
-                    return this.columnCarClass;
+                    return this.columnАвтомобиль;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Зачетная_группаColumn {
+                get {
+                    return this.columnЗачетная_группа;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn КлассColumn {
+                get {
+                    return this.columnКласс;
                 }
             }
             
@@ -479,15 +499,17 @@ namespace ConsoleApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public CrewRow AddCrewRow(int Num, string Drivers, string City, string Car, string Group, string CarClass) {
+            public CrewRow AddCrewRow(int Стартовый_номер, string Водитель, string Город_водителя, string Штурман, string Город_штурмана, string Автомобиль, string Зачетная_группа, string Класс) {
                 CrewRow rowCrewRow = ((CrewRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Num,
-                        Drivers,
-                        City,
-                        Car,
-                        Group,
-                        CarClass};
+                        Стартовый_номер,
+                        Водитель,
+                        Город_водителя,
+                        Штурман,
+                        Город_штурмана,
+                        Автомобиль,
+                        Зачетная_группа,
+                        Класс};
                 rowCrewRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowCrewRow);
                 return rowCrewRow;
@@ -495,9 +517,9 @@ namespace ConsoleApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public CrewRow FindByNum(int Num) {
+            public CrewRow FindByСтартовый_номер(int Стартовый_номер) {
                 return ((CrewRow)(this.Rows.Find(new object[] {
-                            Num})));
+                            Стартовый_номер})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -517,43 +539,53 @@ namespace ConsoleApp1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnNum = base.Columns["Num"];
-                this.columnDrivers = base.Columns["Drivers"];
-                this.columnCity = base.Columns["City"];
-                this.columnCar = base.Columns["Car"];
-                this.columnGroup = base.Columns["Group"];
-                this.columnCarClass = base.Columns["CarClass"];
+                this.columnСтартовый_номер = base.Columns["Стартовый номер"];
+                this.columnВодитель = base.Columns["Водитель"];
+                this.columnГород_водителя = base.Columns["Город водителя"];
+                this.columnШтурман = base.Columns["Штурман"];
+                this.columnГород_штурмана = base.Columns["Город штурмана"];
+                this.columnАвтомобиль = base.Columns["Автомобиль"];
+                this.columnЗачетная_группа = base.Columns["Зачетная группа"];
+                this.columnКласс = base.Columns["Класс"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnNum = new global::System.Data.DataColumn("Num", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNum);
-                this.columnDrivers = new global::System.Data.DataColumn("Drivers", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDrivers);
-                this.columnCity = new global::System.Data.DataColumn("City", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCity);
-                this.columnCar = new global::System.Data.DataColumn("Car", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCar);
-                this.columnGroup = new global::System.Data.DataColumn("Group", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnGroup);
-                this.columnCarClass = new global::System.Data.DataColumn("CarClass", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCarClass);
+                this.columnСтартовый_номер = new global::System.Data.DataColumn("Стартовый номер", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnСтартовый_номер);
+                this.columnВодитель = new global::System.Data.DataColumn("Водитель", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnВодитель);
+                this.columnГород_водителя = new global::System.Data.DataColumn("Город водителя", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnГород_водителя);
+                this.columnШтурман = new global::System.Data.DataColumn("Штурман", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnШтурман);
+                this.columnГород_штурмана = new global::System.Data.DataColumn("Город штурмана", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnГород_штурмана);
+                this.columnАвтомобиль = new global::System.Data.DataColumn("Автомобиль", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnАвтомобиль);
+                this.columnЗачетная_группа = new global::System.Data.DataColumn("Зачетная группа", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnЗачетная_группа);
+                this.columnКласс = new global::System.Data.DataColumn("Класс", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnКласс);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnNum}, true));
-                this.columnNum.AllowDBNull = false;
-                this.columnNum.Unique = true;
-                this.columnDrivers.AllowDBNull = false;
-                this.columnDrivers.MaxLength = 50;
-                this.columnCity.AllowDBNull = false;
-                this.columnCity.MaxLength = 50;
-                this.columnCar.AllowDBNull = false;
-                this.columnCar.MaxLength = 50;
-                this.columnGroup.AllowDBNull = false;
-                this.columnGroup.MaxLength = 50;
-                this.columnCarClass.AllowDBNull = false;
-                this.columnCarClass.MaxLength = 50;
+                                this.columnСтартовый_номер}, true));
+                this.columnСтартовый_номер.AllowDBNull = false;
+                this.columnСтартовый_номер.Unique = true;
+                this.columnВодитель.AllowDBNull = false;
+                this.columnВодитель.MaxLength = 50;
+                this.columnГород_водителя.AllowDBNull = false;
+                this.columnГород_водителя.MaxLength = 50;
+                this.columnШтурман.AllowDBNull = false;
+                this.columnШтурман.MaxLength = 50;
+                this.columnГород_штурмана.AllowDBNull = false;
+                this.columnГород_штурмана.MaxLength = 50;
+                this.columnАвтомобиль.AllowDBNull = false;
+                this.columnАвтомобиль.MaxLength = 50;
+                this.columnЗачетная_группа.AllowDBNull = false;
+                this.columnЗачетная_группа.MaxLength = 50;
+                this.columnКласс.AllowDBNull = false;
+                this.columnКласс.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -689,23 +721,23 @@ namespace ConsoleApp1 {
             
             private global::System.Data.DataColumn columnId;
             
-            private global::System.Data.DataColumn columnTitle;
+            private global::System.Data.DataColumn columnНазвание_гонки;
             
-            private global::System.Data.DataColumn columnDateBegin;
+            private global::System.Data.DataColumn columnДата_начала;
             
-            private global::System.Data.DataColumn columnDateEnd;
+            private global::System.Data.DataColumn columnДата_окончания;
             
-            private global::System.Data.DataColumn columnPointRate;
+            private global::System.Data.DataColumn columnКоэфф_очков;
             
-            private global::System.Data.DataColumn columnCountST;
+            private global::System.Data.DataColumn columnКол_СУ;
             
-            private global::System.Data.DataColumn columnPenaltyToLate;
+            private global::System.Data.DataColumn columnШтраф_за_опоздание;
             
-            private global::System.Data.DataColumn columnPenaltyToHold;
+            private global::System.Data.DataColumn columnШтраф_за_задержку;
             
-            private global::System.Data.DataColumn columnPenaltyKp;
+            private global::System.Data.DataColumn columnШтраф_за_пропуск_КП;
             
-            private global::System.Data.DataColumn columnPenaltyKS;
+            private global::System.Data.DataColumn columnШтраф_за_пропуск_КС;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -750,73 +782,73 @@ namespace ConsoleApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn TitleColumn {
+            public global::System.Data.DataColumn Название_гонкиColumn {
                 get {
-                    return this.columnTitle;
+                    return this.columnНазвание_гонки;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn DateBeginColumn {
+            public global::System.Data.DataColumn Дата_началаColumn {
                 get {
-                    return this.columnDateBegin;
+                    return this.columnДата_начала;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn DateEndColumn {
+            public global::System.Data.DataColumn Дата_окончанияColumn {
                 get {
-                    return this.columnDateEnd;
+                    return this.columnДата_окончания;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn PointRateColumn {
+            public global::System.Data.DataColumn Коэфф_очковColumn {
                 get {
-                    return this.columnPointRate;
+                    return this.columnКоэфф_очков;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn CountSTColumn {
+            public global::System.Data.DataColumn Кол_СУColumn {
                 get {
-                    return this.columnCountST;
+                    return this.columnКол_СУ;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn PenaltyToLateColumn {
+            public global::System.Data.DataColumn Штраф_за_опозданиеColumn {
                 get {
-                    return this.columnPenaltyToLate;
+                    return this.columnШтраф_за_опоздание;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn PenaltyToHoldColumn {
+            public global::System.Data.DataColumn Штраф_за_задержкуColumn {
                 get {
-                    return this.columnPenaltyToHold;
+                    return this.columnШтраф_за_задержку;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn PenaltyKpColumn {
+            public global::System.Data.DataColumn Штраф_за_пропуск_КПColumn {
                 get {
-                    return this.columnPenaltyKp;
+                    return this.columnШтраф_за_пропуск_КП;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn PenaltyKSColumn {
+            public global::System.Data.DataColumn Штраф_за_пропуск_КСColumn {
                 get {
-                    return this.columnPenaltyKS;
+                    return this.columnШтраф_за_пропуск_КС;
                 }
             }
             
@@ -857,19 +889,19 @@ namespace ConsoleApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public RaceRow AddRaceRow(int Id, string Title, System.DateTime DateBegin, System.DateTime DateEnd, double PointRate, int CountST, int PenaltyToLate, int PenaltyToHold, int PenaltyKp, int PenaltyKS) {
+            public RaceRow AddRaceRow(int Id, string Название_гонки, System.DateTime Дата_начала, System.DateTime Дата_окончания, double Коэфф_очков, int Кол_СУ, int Штраф_за_опоздание, int Штраф_за_задержку, int Штраф_за_пропуск_КП, int Штраф_за_пропуск_КС) {
                 RaceRow rowRaceRow = ((RaceRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Id,
-                        Title,
-                        DateBegin,
-                        DateEnd,
-                        PointRate,
-                        CountST,
-                        PenaltyToLate,
-                        PenaltyToHold,
-                        PenaltyKp,
-                        PenaltyKS};
+                        Название_гонки,
+                        Дата_начала,
+                        Дата_окончания,
+                        Коэфф_очков,
+                        Кол_СУ,
+                        Штраф_за_опоздание,
+                        Штраф_за_задержку,
+                        Штраф_за_пропуск_КП,
+                        Штраф_за_пропуск_КС};
                 rowRaceRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowRaceRow);
                 return rowRaceRow;
@@ -900,15 +932,15 @@ namespace ConsoleApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
                 this.columnId = base.Columns["Id"];
-                this.columnTitle = base.Columns["Title"];
-                this.columnDateBegin = base.Columns["DateBegin"];
-                this.columnDateEnd = base.Columns["DateEnd"];
-                this.columnPointRate = base.Columns["PointRate"];
-                this.columnCountST = base.Columns["CountST"];
-                this.columnPenaltyToLate = base.Columns["PenaltyToLate"];
-                this.columnPenaltyToHold = base.Columns["PenaltyToHold"];
-                this.columnPenaltyKp = base.Columns["PenaltyKp"];
-                this.columnPenaltyKS = base.Columns["PenaltyKS"];
+                this.columnНазвание_гонки = base.Columns["Название гонки"];
+                this.columnДата_начала = base.Columns["Дата начала"];
+                this.columnДата_окончания = base.Columns["Дата окончания"];
+                this.columnКоэфф_очков = base.Columns["Коэфф очков"];
+                this.columnКол_СУ = base.Columns["Кол СУ"];
+                this.columnШтраф_за_опоздание = base.Columns["Штраф за опоздание"];
+                this.columnШтраф_за_задержку = base.Columns["Штраф за задержку"];
+                this.columnШтраф_за_пропуск_КП = base.Columns["Штраф за пропуск КП"];
+                this.columnШтраф_за_пропуск_КС = base.Columns["Штраф за пропуск КС"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -916,38 +948,38 @@ namespace ConsoleApp1 {
             private void InitClass() {
                 this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnId);
-                this.columnTitle = new global::System.Data.DataColumn("Title", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTitle);
-                this.columnDateBegin = new global::System.Data.DataColumn("DateBegin", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDateBegin);
-                this.columnDateEnd = new global::System.Data.DataColumn("DateEnd", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDateEnd);
-                this.columnPointRate = new global::System.Data.DataColumn("PointRate", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPointRate);
-                this.columnCountST = new global::System.Data.DataColumn("CountST", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCountST);
-                this.columnPenaltyToLate = new global::System.Data.DataColumn("PenaltyToLate", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPenaltyToLate);
-                this.columnPenaltyToHold = new global::System.Data.DataColumn("PenaltyToHold", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPenaltyToHold);
-                this.columnPenaltyKp = new global::System.Data.DataColumn("PenaltyKp", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPenaltyKp);
-                this.columnPenaltyKS = new global::System.Data.DataColumn("PenaltyKS", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPenaltyKS);
+                this.columnНазвание_гонки = new global::System.Data.DataColumn("Название гонки", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnНазвание_гонки);
+                this.columnДата_начала = new global::System.Data.DataColumn("Дата начала", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnДата_начала);
+                this.columnДата_окончания = new global::System.Data.DataColumn("Дата окончания", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnДата_окончания);
+                this.columnКоэфф_очков = new global::System.Data.DataColumn("Коэфф очков", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnКоэфф_очков);
+                this.columnКол_СУ = new global::System.Data.DataColumn("Кол СУ", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnКол_СУ);
+                this.columnШтраф_за_опоздание = new global::System.Data.DataColumn("Штраф за опоздание", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnШтраф_за_опоздание);
+                this.columnШтраф_за_задержку = new global::System.Data.DataColumn("Штраф за задержку", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnШтраф_за_задержку);
+                this.columnШтраф_за_пропуск_КП = new global::System.Data.DataColumn("Штраф за пропуск КП", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnШтраф_за_пропуск_КП);
+                this.columnШтраф_за_пропуск_КС = new global::System.Data.DataColumn("Штраф за пропуск КС", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnШтраф_за_пропуск_КС);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
                 this.columnId.AllowDBNull = false;
                 this.columnId.Unique = true;
-                this.columnTitle.AllowDBNull = false;
-                this.columnTitle.MaxLength = 50;
-                this.columnDateBegin.AllowDBNull = false;
-                this.columnDateEnd.AllowDBNull = false;
-                this.columnPointRate.AllowDBNull = false;
-                this.columnCountST.AllowDBNull = false;
-                this.columnPenaltyToLate.AllowDBNull = false;
-                this.columnPenaltyToHold.AllowDBNull = false;
-                this.columnPenaltyKp.AllowDBNull = false;
-                this.columnPenaltyKS.AllowDBNull = false;
+                this.columnНазвание_гонки.AllowDBNull = false;
+                this.columnНазвание_гонки.MaxLength = 50;
+                this.columnДата_начала.AllowDBNull = false;
+                this.columnДата_окончания.AllowDBNull = false;
+                this.columnКоэфф_очков.AllowDBNull = false;
+                this.columnКол_СУ.AllowDBNull = false;
+                this.columnШтраф_за_опоздание.AllowDBNull = false;
+                this.columnШтраф_за_задержку.AllowDBNull = false;
+                this.columnШтраф_за_пропуск_КП.AllowDBNull = false;
+                this.columnШтраф_за_пропуск_КС.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1435,67 +1467,89 @@ namespace ConsoleApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int Num {
+            public int Стартовый_номер {
                 get {
-                    return ((int)(this[this.tableCrew.NumColumn]));
+                    return ((int)(this[this.tableCrew.Стартовый_номерColumn]));
                 }
                 set {
-                    this[this.tableCrew.NumColumn] = value;
+                    this[this.tableCrew.Стартовый_номерColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Drivers {
+            public string Водитель {
                 get {
-                    return ((string)(this[this.tableCrew.DriversColumn]));
+                    return ((string)(this[this.tableCrew.ВодительColumn]));
                 }
                 set {
-                    this[this.tableCrew.DriversColumn] = value;
+                    this[this.tableCrew.ВодительColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string City {
+            public string Город_водителя {
                 get {
-                    return ((string)(this[this.tableCrew.CityColumn]));
+                    return ((string)(this[this.tableCrew.Город_водителяColumn]));
                 }
                 set {
-                    this[this.tableCrew.CityColumn] = value;
+                    this[this.tableCrew.Город_водителяColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Car {
+            public string Штурман {
                 get {
-                    return ((string)(this[this.tableCrew.CarColumn]));
+                    return ((string)(this[this.tableCrew.ШтурманColumn]));
                 }
                 set {
-                    this[this.tableCrew.CarColumn] = value;
+                    this[this.tableCrew.ШтурманColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Group {
+            public string Город_штурмана {
                 get {
-                    return ((string)(this[this.tableCrew.GroupColumn]));
+                    return ((string)(this[this.tableCrew.Город_штурманаColumn]));
                 }
                 set {
-                    this[this.tableCrew.GroupColumn] = value;
+                    this[this.tableCrew.Город_штурманаColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string CarClass {
+            public string Автомобиль {
                 get {
-                    return ((string)(this[this.tableCrew.CarClassColumn]));
+                    return ((string)(this[this.tableCrew.АвтомобильColumn]));
                 }
                 set {
-                    this[this.tableCrew.CarClassColumn] = value;
+                    this[this.tableCrew.АвтомобильColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Зачетная_группа {
+                get {
+                    return ((string)(this[this.tableCrew.Зачетная_группаColumn]));
+                }
+                set {
+                    this[this.tableCrew.Зачетная_группаColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Класс {
+                get {
+                    return ((string)(this[this.tableCrew.КлассColumn]));
+                }
+                set {
+                    this[this.tableCrew.КлассColumn] = value;
                 }
             }
         }
@@ -1527,100 +1581,100 @@ namespace ConsoleApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Title {
+            public string Название_гонки {
                 get {
-                    return ((string)(this[this.tableRace.TitleColumn]));
+                    return ((string)(this[this.tableRace.Название_гонкиColumn]));
                 }
                 set {
-                    this[this.tableRace.TitleColumn] = value;
+                    this[this.tableRace.Название_гонкиColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime DateBegin {
+            public System.DateTime Дата_начала {
                 get {
-                    return ((global::System.DateTime)(this[this.tableRace.DateBeginColumn]));
+                    return ((global::System.DateTime)(this[this.tableRace.Дата_началаColumn]));
                 }
                 set {
-                    this[this.tableRace.DateBeginColumn] = value;
+                    this[this.tableRace.Дата_началаColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime DateEnd {
+            public System.DateTime Дата_окончания {
                 get {
-                    return ((global::System.DateTime)(this[this.tableRace.DateEndColumn]));
+                    return ((global::System.DateTime)(this[this.tableRace.Дата_окончанияColumn]));
                 }
                 set {
-                    this[this.tableRace.DateEndColumn] = value;
+                    this[this.tableRace.Дата_окончанияColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public double PointRate {
+            public double Коэфф_очков {
                 get {
-                    return ((double)(this[this.tableRace.PointRateColumn]));
+                    return ((double)(this[this.tableRace.Коэфф_очковColumn]));
                 }
                 set {
-                    this[this.tableRace.PointRateColumn] = value;
+                    this[this.tableRace.Коэфф_очковColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int CountST {
+            public int Кол_СУ {
                 get {
-                    return ((int)(this[this.tableRace.CountSTColumn]));
+                    return ((int)(this[this.tableRace.Кол_СУColumn]));
                 }
                 set {
-                    this[this.tableRace.CountSTColumn] = value;
+                    this[this.tableRace.Кол_СУColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int PenaltyToLate {
+            public int Штраф_за_опоздание {
                 get {
-                    return ((int)(this[this.tableRace.PenaltyToLateColumn]));
+                    return ((int)(this[this.tableRace.Штраф_за_опозданиеColumn]));
                 }
                 set {
-                    this[this.tableRace.PenaltyToLateColumn] = value;
+                    this[this.tableRace.Штраф_за_опозданиеColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int PenaltyToHold {
+            public int Штраф_за_задержку {
                 get {
-                    return ((int)(this[this.tableRace.PenaltyToHoldColumn]));
+                    return ((int)(this[this.tableRace.Штраф_за_задержкуColumn]));
                 }
                 set {
-                    this[this.tableRace.PenaltyToHoldColumn] = value;
+                    this[this.tableRace.Штраф_за_задержкуColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int PenaltyKp {
+            public int Штраф_за_пропуск_КП {
                 get {
-                    return ((int)(this[this.tableRace.PenaltyKpColumn]));
+                    return ((int)(this[this.tableRace.Штраф_за_пропуск_КПColumn]));
                 }
                 set {
-                    this[this.tableRace.PenaltyKpColumn] = value;
+                    this[this.tableRace.Штраф_за_пропуск_КПColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int PenaltyKS {
+            public int Штраф_за_пропуск_КС {
                 get {
-                    return ((int)(this[this.tableRace.PenaltyKSColumn]));
+                    return ((int)(this[this.tableRace.Штраф_за_пропуск_КСColumn]));
                 }
                 set {
-                    this[this.tableRace.PenaltyKSColumn] = value;
+                    this[this.tableRace.Штраф_за_пропуск_КСColumn] = value;
                 }
             }
         }
@@ -1933,54 +1987,61 @@ namespace ConsoleApp1.Database1DataSetTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Crew";
-            tableMapping.ColumnMappings.Add("Num", "Num");
-            tableMapping.ColumnMappings.Add("Drivers", "Drivers");
-            tableMapping.ColumnMappings.Add("City", "City");
-            tableMapping.ColumnMappings.Add("Car", "Car");
-            tableMapping.ColumnMappings.Add("Group", "Group");
-            tableMapping.ColumnMappings.Add("CarClass", "CarClass");
+            tableMapping.ColumnMappings.Add("Стартовый номер", "Стартовый номер");
+            tableMapping.ColumnMappings.Add("Водитель", "Водитель");
+            tableMapping.ColumnMappings.Add("Город водителя", "Город водителя");
+            tableMapping.ColumnMappings.Add("Штурман", "Штурман");
+            tableMapping.ColumnMappings.Add("Город штурмана", "Город штурмана");
+            tableMapping.ColumnMappings.Add("Автомобиль", "Автомобиль");
+            tableMapping.ColumnMappings.Add("Зачетная группа", "Зачетная группа");
+            tableMapping.ColumnMappings.Add("Класс", "Класс");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Crew] WHERE (([Num] = @Original_Num) AND ([Drivers] = @Origina" +
-                "l_Drivers) AND ([City] = @Original_City) AND ([Car] = @Original_Car) AND ([Group" +
-                "] = @Original_Group) AND ([CarClass] = @Original_CarClass))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Crew] WHERE (([Стартовый номер] = @Original_Стартовый_номер) AND ([Водитель] = @Original_Водитель) AND ([Город водителя] = @Original_Город_водителя) AND ([Штурман] = @Original_Штурман) AND ([Город штурмана] = @Original_Город_штурмана) AND ([Автомобиль] = @Original_Автомобиль) AND ([Зачетная группа] = @Original_Зачетная_группа) AND ([Класс] = @Original_Класс))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Num", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Num", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Drivers", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Drivers", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_City", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "City", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Car", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Car", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Group", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Group", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CarClass", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CarClass", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Стартовый_номер", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Стартовый номер", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Водитель", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Водитель", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Город_водителя", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Город водителя", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Штурман", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Штурман", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Город_штурмана", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Город штурмана", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Автомобиль", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Автомобиль", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Зачетная_группа", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Зачетная группа", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Класс", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Класс", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Crew] ([Num], [Drivers], [City], [Car], [Group], [CarClass]) V" +
-                "ALUES (@Num, @Drivers, @City, @Car, @Group, @CarClass);\r\nSELECT Num, Drivers, Ci" +
-                "ty, Car, [Group], CarClass FROM Crew WHERE (Num = @Num)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Crew] ([Стартовый номер], [Водитель], [Город водителя], [Штурман], [Город штурмана], [Автомобиль], [Зачетная группа], [Класс]) VALUES (@Стартовый_номер, @Водитель, @Город_водителя, @Штурман, @Город_штурмана, @Автомобиль, @Зачетная_группа, @Класс);
+SELECT [Стартовый номер], Водитель, [Город водителя], Штурман, [Город штурмана], Автомобиль, [Зачетная группа], Класс FROM Crew WHERE ([Стартовый номер] = @Стартовый_номер)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Num", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Num", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Drivers", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Drivers", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@City", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "City", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Car", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Car", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Group", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Group", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CarClass", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CarClass", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Стартовый_номер", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Стартовый номер", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Водитель", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Водитель", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Город_водителя", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Город водителя", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Штурман", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Штурман", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Город_штурмана", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Город штурмана", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Автомобиль", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Автомобиль", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Зачетная_группа", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Зачетная группа", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Класс", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Класс", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Crew] SET [Num] = @Num, [Drivers] = @Drivers, [City] = @City, [Car] = @Car, [Group] = @Group, [CarClass] = @CarClass WHERE (([Num] = @Original_Num) AND ([Drivers] = @Original_Drivers) AND ([City] = @Original_City) AND ([Car] = @Original_Car) AND ([Group] = @Original_Group) AND ([CarClass] = @Original_CarClass));
-SELECT Num, Drivers, City, Car, [Group], CarClass FROM Crew WHERE (Num = @Num)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Crew] SET [Стартовый номер] = @Стартовый_номер, [Водитель] = @Водитель, [Город водителя] = @Город_водителя, [Штурман] = @Штурман, [Город штурмана] = @Город_штурмана, [Автомобиль] = @Автомобиль, [Зачетная группа] = @Зачетная_группа, [Класс] = @Класс WHERE (([Стартовый номер] = @Original_Стартовый_номер) AND ([Водитель] = @Original_Водитель) AND ([Город водителя] = @Original_Город_водителя) AND ([Штурман] = @Original_Штурман) AND ([Город штурмана] = @Original_Город_штурмана) AND ([Автомобиль] = @Original_Автомобиль) AND ([Зачетная группа] = @Original_Зачетная_группа) AND ([Класс] = @Original_Класс));
+SELECT [Стартовый номер], Водитель, [Город водителя], Штурман, [Город штурмана], Автомобиль, [Зачетная группа], Класс FROM Crew WHERE ([Стартовый номер] = @Стартовый_номер)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Num", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Num", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Drivers", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Drivers", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@City", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "City", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Car", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Car", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Group", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Group", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CarClass", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CarClass", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Num", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Num", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Drivers", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Drivers", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_City", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "City", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Car", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Car", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Group", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Group", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CarClass", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CarClass", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Стартовый_номер", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Стартовый номер", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Водитель", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Водитель", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Город_водителя", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Город водителя", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Штурман", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Штурман", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Город_штурмана", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Город штурмана", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Автомобиль", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Автомобиль", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Зачетная_группа", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Зачетная группа", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Класс", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Класс", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Стартовый_номер", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Стартовый номер", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Водитель", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Водитель", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Город_водителя", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Город водителя", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Штурман", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Штурман", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Город_штурмана", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Город штурмана", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Автомобиль", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Автомобиль", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Зачетная_группа", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Зачетная группа", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Класс", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Класс", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1996,7 +2057,8 @@ SELECT Num, Drivers, City, Car, [Group], CarClass FROM Crew WHERE (Num = @Num)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Num, Drivers, City, Car, [Group], CarClass FROM dbo.Crew";
+            this._commandCollection[0].CommandText = "SELECT [Стартовый номер], Водитель, [Город водителя], Штурман, [Город штурмана], " +
+                "Автомобиль, [Зачетная группа], Класс FROM dbo.Crew";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -2057,37 +2119,49 @@ SELECT Num, Drivers, City, Car, [Group], CarClass FROM Crew WHERE (Num = @Num)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Num, string Original_Drivers, string Original_City, string Original_Car, string Original_Group, string Original_CarClass) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Num));
-            if ((Original_Drivers == null)) {
-                throw new global::System.ArgumentNullException("Original_Drivers");
+        public virtual int Delete(int Original_Стартовый_номер, string Original_Водитель, string Original_Город_водителя, string Original_Штурман, string Original_Город_штурмана, string Original_Автомобиль, string Original_Зачетная_группа, string Original_Класс) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Стартовый_номер));
+            if ((Original_Водитель == null)) {
+                throw new global::System.ArgumentNullException("Original_Водитель");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Drivers));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Водитель));
             }
-            if ((Original_City == null)) {
-                throw new global::System.ArgumentNullException("Original_City");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_City));
-            }
-            if ((Original_Car == null)) {
-                throw new global::System.ArgumentNullException("Original_Car");
+            if ((Original_Город_водителя == null)) {
+                throw new global::System.ArgumentNullException("Original_Город_водителя");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_Car));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Город_водителя));
             }
-            if ((Original_Group == null)) {
-                throw new global::System.ArgumentNullException("Original_Group");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Group));
-            }
-            if ((Original_CarClass == null)) {
-                throw new global::System.ArgumentNullException("Original_CarClass");
+            if ((Original_Штурман == null)) {
+                throw new global::System.ArgumentNullException("Original_Штурман");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_CarClass));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_Штурман));
+            }
+            if ((Original_Город_штурмана == null)) {
+                throw new global::System.ArgumentNullException("Original_Город_штурмана");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Город_штурмана));
+            }
+            if ((Original_Автомобиль == null)) {
+                throw new global::System.ArgumentNullException("Original_Автомобиль");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_Автомобиль));
+            }
+            if ((Original_Зачетная_группа == null)) {
+                throw new global::System.ArgumentNullException("Original_Зачетная_группа");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_Зачетная_группа));
+            }
+            if ((Original_Класс == null)) {
+                throw new global::System.ArgumentNullException("Original_Класс");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((string)(Original_Класс));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -2109,37 +2183,49 @@ SELECT Num, Drivers, City, Car, [Group], CarClass FROM Crew WHERE (Num = @Num)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int Num, string Drivers, string City, string Car, string Group, string CarClass) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Num));
-            if ((Drivers == null)) {
-                throw new global::System.ArgumentNullException("Drivers");
+        public virtual int Insert(int Стартовый_номер, string Водитель, string Город_водителя, string Штурман, string Город_штурмана, string Автомобиль, string Зачетная_группа, string Класс) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Стартовый_номер));
+            if ((Водитель == null)) {
+                throw new global::System.ArgumentNullException("Водитель");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Drivers));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Водитель));
             }
-            if ((City == null)) {
-                throw new global::System.ArgumentNullException("City");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(City));
-            }
-            if ((Car == null)) {
-                throw new global::System.ArgumentNullException("Car");
+            if ((Город_водителя == null)) {
+                throw new global::System.ArgumentNullException("Город_водителя");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Car));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Город_водителя));
             }
-            if ((Group == null)) {
-                throw new global::System.ArgumentNullException("Group");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Group));
-            }
-            if ((CarClass == null)) {
-                throw new global::System.ArgumentNullException("CarClass");
+            if ((Штурман == null)) {
+                throw new global::System.ArgumentNullException("Штурман");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(CarClass));
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Штурман));
+            }
+            if ((Город_штурмана == null)) {
+                throw new global::System.ArgumentNullException("Город_штурмана");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Город_штурмана));
+            }
+            if ((Автомобиль == null)) {
+                throw new global::System.ArgumentNullException("Автомобиль");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(Автомобиль));
+            }
+            if ((Зачетная_группа == null)) {
+                throw new global::System.ArgumentNullException("Зачетная_группа");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(Зачетная_группа));
+            }
+            if ((Класс == null)) {
+                throw new global::System.ArgumentNullException("Класс");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(Класс));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -2161,68 +2247,108 @@ SELECT Num, Drivers, City, Car, [Group], CarClass FROM Crew WHERE (Num = @Num)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int Num, string Drivers, string City, string Car, string Group, string CarClass, int Original_Num, string Original_Drivers, string Original_City, string Original_Car, string Original_Group, string Original_CarClass) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Num));
-            if ((Drivers == null)) {
-                throw new global::System.ArgumentNullException("Drivers");
+        public virtual int Update(
+                    int Стартовый_номер, 
+                    string Водитель, 
+                    string Город_водителя, 
+                    string Штурман, 
+                    string Город_штурмана, 
+                    string Автомобиль, 
+                    string Зачетная_группа, 
+                    string Класс, 
+                    int Original_Стартовый_номер, 
+                    string Original_Водитель, 
+                    string Original_Город_водителя, 
+                    string Original_Штурман, 
+                    string Original_Город_штурмана, 
+                    string Original_Автомобиль, 
+                    string Original_Зачетная_группа, 
+                    string Original_Класс) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Стартовый_номер));
+            if ((Водитель == null)) {
+                throw new global::System.ArgumentNullException("Водитель");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Drivers));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Водитель));
             }
-            if ((City == null)) {
-                throw new global::System.ArgumentNullException("City");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(City));
-            }
-            if ((Car == null)) {
-                throw new global::System.ArgumentNullException("Car");
+            if ((Город_водителя == null)) {
+                throw new global::System.ArgumentNullException("Город_водителя");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Car));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Город_водителя));
             }
-            if ((Group == null)) {
-                throw new global::System.ArgumentNullException("Group");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Group));
-            }
-            if ((CarClass == null)) {
-                throw new global::System.ArgumentNullException("CarClass");
+            if ((Штурман == null)) {
+                throw new global::System.ArgumentNullException("Штурман");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(CarClass));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Штурман));
             }
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_Num));
-            if ((Original_Drivers == null)) {
-                throw new global::System.ArgumentNullException("Original_Drivers");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_Drivers));
-            }
-            if ((Original_City == null)) {
-                throw new global::System.ArgumentNullException("Original_City");
+            if ((Город_штурмана == null)) {
+                throw new global::System.ArgumentNullException("Город_штурмана");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_City));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Город_штурмана));
             }
-            if ((Original_Car == null)) {
-                throw new global::System.ArgumentNullException("Original_Car");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_Car));
-            }
-            if ((Original_Group == null)) {
-                throw new global::System.ArgumentNullException("Original_Group");
+            if ((Автомобиль == null)) {
+                throw new global::System.ArgumentNullException("Автомобиль");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_Group));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Автомобиль));
             }
-            if ((Original_CarClass == null)) {
-                throw new global::System.ArgumentNullException("Original_CarClass");
+            if ((Зачетная_группа == null)) {
+                throw new global::System.ArgumentNullException("Зачетная_группа");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_CarClass));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Зачетная_группа));
+            }
+            if ((Класс == null)) {
+                throw new global::System.ArgumentNullException("Класс");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Класс));
+            }
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_Стартовый_номер));
+            if ((Original_Водитель == null)) {
+                throw new global::System.ArgumentNullException("Original_Водитель");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_Водитель));
+            }
+            if ((Original_Город_водителя == null)) {
+                throw new global::System.ArgumentNullException("Original_Город_водителя");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_Город_водителя));
+            }
+            if ((Original_Штурман == null)) {
+                throw new global::System.ArgumentNullException("Original_Штурман");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_Штурман));
+            }
+            if ((Original_Город_штурмана == null)) {
+                throw new global::System.ArgumentNullException("Original_Город_штурмана");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_Город_штурмана));
+            }
+            if ((Original_Автомобиль == null)) {
+                throw new global::System.ArgumentNullException("Original_Автомобиль");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_Автомобиль));
+            }
+            if ((Original_Зачетная_группа == null)) {
+                throw new global::System.ArgumentNullException("Original_Зачетная_группа");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_Зачетная_группа));
+            }
+            if ((Original_Класс == null)) {
+                throw new global::System.ArgumentNullException("Original_Класс");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_Класс));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -2244,8 +2370,8 @@ SELECT Num, Drivers, City, Car, [Group], CarClass FROM Crew WHERE (Num = @Num)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Drivers, string City, string Car, string Group, string CarClass, int Original_Num, string Original_Drivers, string Original_City, string Original_Car, string Original_Group, string Original_CarClass) {
-            return this.Update(Original_Num, Drivers, City, Car, Group, CarClass, Original_Num, Original_Drivers, Original_City, Original_Car, Original_Group, Original_CarClass);
+        public virtual int Update(string Водитель, string Город_водителя, string Штурман, string Город_штурмана, string Автомобиль, string Зачетная_группа, string Класс, int Original_Стартовый_номер, string Original_Водитель, string Original_Город_водителя, string Original_Штурман, string Original_Город_штурмана, string Original_Автомобиль, string Original_Зачетная_группа, string Original_Класс) {
+            return this.Update(Original_Стартовый_номер, Водитель, Город_водителя, Штурман, Город_штурмана, Автомобиль, Зачетная_группа, Класс, Original_Стартовый_номер, Original_Водитель, Original_Город_водителя, Original_Штурман, Original_Город_штурмана, Original_Автомобиль, Original_Зачетная_группа, Original_Класс);
         }
     }
     
@@ -2371,70 +2497,70 @@ SELECT Num, Drivers, City, Car, [Group], CarClass FROM Crew WHERE (Num = @Num)";
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Race";
             tableMapping.ColumnMappings.Add("Id", "Id");
-            tableMapping.ColumnMappings.Add("Title", "Title");
-            tableMapping.ColumnMappings.Add("DateBegin", "DateBegin");
-            tableMapping.ColumnMappings.Add("DateEnd", "DateEnd");
-            tableMapping.ColumnMappings.Add("PointRate", "PointRate");
-            tableMapping.ColumnMappings.Add("CountST", "CountST");
-            tableMapping.ColumnMappings.Add("PenaltyToLate", "PenaltyToLate");
-            tableMapping.ColumnMappings.Add("PenaltyToHold", "PenaltyToHold");
-            tableMapping.ColumnMappings.Add("PenaltyKp", "PenaltyKp");
-            tableMapping.ColumnMappings.Add("PenaltyKS", "PenaltyKS");
+            tableMapping.ColumnMappings.Add("Название гонки", "Название гонки");
+            tableMapping.ColumnMappings.Add("Дата начала", "Дата начала");
+            tableMapping.ColumnMappings.Add("Дата окончания", "Дата окончания");
+            tableMapping.ColumnMappings.Add("Коэфф очков", "Коэфф очков");
+            tableMapping.ColumnMappings.Add("Кол СУ", "Кол СУ");
+            tableMapping.ColumnMappings.Add("Штраф за опоздание", "Штраф за опоздание");
+            tableMapping.ColumnMappings.Add("Штраф за задержку", "Штраф за задержку");
+            tableMapping.ColumnMappings.Add("Штраф за пропуск КП", "Штраф за пропуск КП");
+            tableMapping.ColumnMappings.Add("Штраф за пропуск КС", "Штраф за пропуск КС");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Race] WHERE (([Id] = @Original_Id) AND ([Title] = @Original_Title) AND ([DateBegin] = @Original_DateBegin) AND ([DateEnd] = @Original_DateEnd) AND ([PointRate] = @Original_PointRate) AND ([CountST] = @Original_CountST) AND ([PenaltyToLate] = @Original_PenaltyToLate) AND ([PenaltyToHold] = @Original_PenaltyToHold) AND ([PenaltyKp] = @Original_PenaltyKp) AND ([PenaltyKS] = @Original_PenaltyKS))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Race] WHERE (([Id] = @Original_Id) AND ([Название гонки] = @Original_Название_гонки) AND ([Дата начала] = @Original_Дата_начала) AND ([Дата окончания] = @Original_Дата_окончания) AND ([Коэфф очков] = @Original_Коэфф_очков) AND ([Кол СУ] = @Original_Кол_СУ) AND ([Штраф за опоздание] = @Original_Штраф_за_опоздание) AND ([Штраф за задержку] = @Original_Штраф_за_задержку) AND ([Штраф за пропуск КП] = @Original_Штраф_за_пропуск_КП) AND ([Штраф за пропуск КС] = @Original_Штраф_за_пропуск_КС))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Title", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Title", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DateBegin", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateBegin", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DateEnd", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateEnd", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PointRate", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PointRate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CountST", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CountST", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PenaltyToLate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PenaltyToLate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PenaltyToHold", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PenaltyToHold", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PenaltyKp", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PenaltyKp", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PenaltyKS", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PenaltyKS", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Название_гонки", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Название гонки", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Дата_начала", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Дата начала", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Дата_окончания", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Дата окончания", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Коэфф_очков", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Коэфф очков", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Кол_СУ", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Кол СУ", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Штраф_за_опоздание", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Штраф за опоздание", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Штраф_за_задержку", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Штраф за задержку", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Штраф_за_пропуск_КП", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Штраф за пропуск КП", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Штраф_за_пропуск_КС", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Штраф за пропуск КС", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Race] ([Id], [Title], [DateBegin], [DateEnd], [PointRate], [CountST], [PenaltyToLate], [PenaltyToHold], [PenaltyKp], [PenaltyKS]) VALUES (@Id, @Title, @DateBegin, @DateEnd, @PointRate, @CountST, @PenaltyToLate, @PenaltyToHold, @PenaltyKp, @PenaltyKS);
-SELECT Id, Title, DateBegin, DateEnd, PointRate, CountST, PenaltyToLate, PenaltyToHold, PenaltyKp, PenaltyKS FROM Race WHERE (Id = @Id)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Race] ([Id], [Название гонки], [Дата начала], [Дата окончания], [Коэфф очков], [Кол СУ], [Штраф за опоздание], [Штраф за задержку], [Штраф за пропуск КП], [Штраф за пропуск КС]) VALUES (@Id, @Название_гонки, @Дата_начала, @Дата_окончания, @Коэфф_очков, @Кол_СУ, @Штраф_за_опоздание, @Штраф_за_задержку, @Штраф_за_пропуск_КП, @Штраф_за_пропуск_КС);
+SELECT Id, [Название гонки], [Дата начала], [Дата окончания], [Коэфф очков], [Кол СУ], [Штраф за опоздание], [Штраф за задержку], [Штраф за пропуск КП], [Штраф за пропуск КС] FROM Race WHERE (Id = @Id)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Title", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Title", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DateBegin", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateBegin", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DateEnd", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateEnd", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PointRate", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PointRate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CountST", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CountST", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PenaltyToLate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PenaltyToLate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PenaltyToHold", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PenaltyToHold", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PenaltyKp", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PenaltyKp", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PenaltyKS", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PenaltyKS", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Название_гонки", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Название гонки", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Дата_начала", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Дата начала", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Дата_окончания", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Дата окончания", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Коэфф_очков", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Коэфф очков", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Кол_СУ", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Кол СУ", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Штраф_за_опоздание", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Штраф за опоздание", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Штраф_за_задержку", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Штраф за задержку", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Штраф_за_пропуск_КП", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Штраф за пропуск КП", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Штраф_за_пропуск_КС", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Штраф за пропуск КС", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Race] SET [Id] = @Id, [Title] = @Title, [DateBegin] = @DateBegin, [DateEnd] = @DateEnd, [PointRate] = @PointRate, [CountST] = @CountST, [PenaltyToLate] = @PenaltyToLate, [PenaltyToHold] = @PenaltyToHold, [PenaltyKp] = @PenaltyKp, [PenaltyKS] = @PenaltyKS WHERE (([Id] = @Original_Id) AND ([Title] = @Original_Title) AND ([DateBegin] = @Original_DateBegin) AND ([DateEnd] = @Original_DateEnd) AND ([PointRate] = @Original_PointRate) AND ([CountST] = @Original_CountST) AND ([PenaltyToLate] = @Original_PenaltyToLate) AND ([PenaltyToHold] = @Original_PenaltyToHold) AND ([PenaltyKp] = @Original_PenaltyKp) AND ([PenaltyKS] = @Original_PenaltyKS));
-SELECT Id, Title, DateBegin, DateEnd, PointRate, CountST, PenaltyToLate, PenaltyToHold, PenaltyKp, PenaltyKS FROM Race WHERE (Id = @Id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Race] SET [Id] = @Id, [Название гонки] = @Название_гонки, [Дата начала] = @Дата_начала, [Дата окончания] = @Дата_окончания, [Коэфф очков] = @Коэфф_очков, [Кол СУ] = @Кол_СУ, [Штраф за опоздание] = @Штраф_за_опоздание, [Штраф за задержку] = @Штраф_за_задержку, [Штраф за пропуск КП] = @Штраф_за_пропуск_КП, [Штраф за пропуск КС] = @Штраф_за_пропуск_КС WHERE (([Id] = @Original_Id) AND ([Название гонки] = @Original_Название_гонки) AND ([Дата начала] = @Original_Дата_начала) AND ([Дата окончания] = @Original_Дата_окончания) AND ([Коэфф очков] = @Original_Коэфф_очков) AND ([Кол СУ] = @Original_Кол_СУ) AND ([Штраф за опоздание] = @Original_Штраф_за_опоздание) AND ([Штраф за задержку] = @Original_Штраф_за_задержку) AND ([Штраф за пропуск КП] = @Original_Штраф_за_пропуск_КП) AND ([Штраф за пропуск КС] = @Original_Штраф_за_пропуск_КС));
+SELECT Id, [Название гонки], [Дата начала], [Дата окончания], [Коэфф очков], [Кол СУ], [Штраф за опоздание], [Штраф за задержку], [Штраф за пропуск КП], [Штраф за пропуск КС] FROM Race WHERE (Id = @Id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Title", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Title", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DateBegin", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateBegin", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DateEnd", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateEnd", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PointRate", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PointRate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CountST", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CountST", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PenaltyToLate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PenaltyToLate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PenaltyToHold", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PenaltyToHold", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PenaltyKp", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PenaltyKp", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PenaltyKS", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PenaltyKS", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Название_гонки", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Название гонки", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Дата_начала", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Дата начала", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Дата_окончания", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Дата окончания", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Коэфф_очков", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Коэфф очков", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Кол_СУ", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Кол СУ", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Штраф_за_опоздание", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Штраф за опоздание", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Штраф_за_задержку", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Штраф за задержку", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Штраф_за_пропуск_КП", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Штраф за пропуск КП", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Штраф_за_пропуск_КС", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Штраф за пропуск КС", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Title", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Title", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DateBegin", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateBegin", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DateEnd", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateEnd", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PointRate", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PointRate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CountST", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CountST", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PenaltyToLate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PenaltyToLate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PenaltyToHold", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PenaltyToHold", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PenaltyKp", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PenaltyKp", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PenaltyKS", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PenaltyKS", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Название_гонки", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Название гонки", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Дата_начала", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Дата начала", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Дата_окончания", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Дата окончания", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Коэфф_очков", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Коэфф очков", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Кол_СУ", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Кол СУ", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Штраф_за_опоздание", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Штраф за опоздание", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Штраф_за_задержку", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Штраф за задержку", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Штраф_за_пропуск_КП", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Штраф за пропуск КП", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Штраф_за_пропуск_КС", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Штраф за пропуск КС", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2450,8 +2576,9 @@ SELECT Id, Title, DateBegin, DateEnd, PointRate, CountST, PenaltyToLate, Penalty
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id, Title, DateBegin, DateEnd, PointRate, CountST, PenaltyToLate, PenaltyT" +
-                "oHold, PenaltyKp, PenaltyKS FROM dbo.Race";
+            this._commandCollection[0].CommandText = "SELECT Id, [Название гонки], [Дата начала], [Дата окончания], [Коэфф очков], [Кол" +
+                " СУ], [Штраф за опоздание], [Штраф за задержку], [Штраф за пропуск КП], [Штраф з" +
+                "а пропуск КС] FROM dbo.Race";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -2512,22 +2639,22 @@ SELECT Id, Title, DateBegin, DateEnd, PointRate, CountST, PenaltyToLate, Penalty
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, string Original_Title, System.DateTime Original_DateBegin, System.DateTime Original_DateEnd, double Original_PointRate, int Original_CountST, int Original_PenaltyToLate, int Original_PenaltyToHold, int Original_PenaltyKp, int Original_PenaltyKS) {
+        public virtual int Delete(int Original_Id, string Original_Название_гонки, System.DateTime Original_Дата_начала, System.DateTime Original_Дата_окончания, double Original_Коэфф_очков, int Original_Кол_СУ, int Original_Штраф_за_опоздание, int Original_Штраф_за_задержку, int Original_Штраф_за_пропуск_КП, int Original_Штраф_за_пропуск_КС) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
-            if ((Original_Title == null)) {
-                throw new global::System.ArgumentNullException("Original_Title");
+            if ((Original_Название_гонки == null)) {
+                throw new global::System.ArgumentNullException("Original_Название_гонки");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Title));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Название_гонки));
             }
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((System.DateTime)(Original_DateBegin));
-            this.Adapter.DeleteCommand.Parameters[3].Value = ((System.DateTime)(Original_DateEnd));
-            this.Adapter.DeleteCommand.Parameters[4].Value = ((double)(Original_PointRate));
-            this.Adapter.DeleteCommand.Parameters[5].Value = ((int)(Original_CountST));
-            this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_PenaltyToLate));
-            this.Adapter.DeleteCommand.Parameters[7].Value = ((int)(Original_PenaltyToHold));
-            this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_PenaltyKp));
-            this.Adapter.DeleteCommand.Parameters[9].Value = ((int)(Original_PenaltyKS));
+            this.Adapter.DeleteCommand.Parameters[2].Value = ((System.DateTime)(Original_Дата_начала));
+            this.Adapter.DeleteCommand.Parameters[3].Value = ((System.DateTime)(Original_Дата_окончания));
+            this.Adapter.DeleteCommand.Parameters[4].Value = ((double)(Original_Коэфф_очков));
+            this.Adapter.DeleteCommand.Parameters[5].Value = ((int)(Original_Кол_СУ));
+            this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_Штраф_за_опоздание));
+            this.Adapter.DeleteCommand.Parameters[7].Value = ((int)(Original_Штраф_за_задержку));
+            this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_Штраф_за_пропуск_КП));
+            this.Adapter.DeleteCommand.Parameters[9].Value = ((int)(Original_Штраф_за_пропуск_КС));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -2548,22 +2675,22 @@ SELECT Id, Title, DateBegin, DateEnd, PointRate, CountST, PenaltyToLate, Penalty
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int Id, string Title, System.DateTime DateBegin, System.DateTime DateEnd, double PointRate, int CountST, int PenaltyToLate, int PenaltyToHold, int PenaltyKp, int PenaltyKS) {
+        public virtual int Insert(int Id, string Название_гонки, System.DateTime Дата_начала, System.DateTime Дата_окончания, double Коэфф_очков, int Кол_СУ, int Штраф_за_опоздание, int Штраф_за_задержку, int Штраф_за_пропуск_КП, int Штраф_за_пропуск_КС) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Id));
-            if ((Title == null)) {
-                throw new global::System.ArgumentNullException("Title");
+            if ((Название_гонки == null)) {
+                throw new global::System.ArgumentNullException("Название_гонки");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Title));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Название_гонки));
             }
-            this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(DateBegin));
-            this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(DateEnd));
-            this.Adapter.InsertCommand.Parameters[4].Value = ((double)(PointRate));
-            this.Adapter.InsertCommand.Parameters[5].Value = ((int)(CountST));
-            this.Adapter.InsertCommand.Parameters[6].Value = ((int)(PenaltyToLate));
-            this.Adapter.InsertCommand.Parameters[7].Value = ((int)(PenaltyToHold));
-            this.Adapter.InsertCommand.Parameters[8].Value = ((int)(PenaltyKp));
-            this.Adapter.InsertCommand.Parameters[9].Value = ((int)(PenaltyKS));
+            this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(Дата_начала));
+            this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(Дата_окончания));
+            this.Adapter.InsertCommand.Parameters[4].Value = ((double)(Коэфф_очков));
+            this.Adapter.InsertCommand.Parameters[5].Value = ((int)(Кол_СУ));
+            this.Adapter.InsertCommand.Parameters[6].Value = ((int)(Штраф_за_опоздание));
+            this.Adapter.InsertCommand.Parameters[7].Value = ((int)(Штраф_за_задержку));
+            this.Adapter.InsertCommand.Parameters[8].Value = ((int)(Штраф_за_пропуск_КП));
+            this.Adapter.InsertCommand.Parameters[9].Value = ((int)(Штраф_за_пропуск_КС));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -2586,55 +2713,55 @@ SELECT Id, Title, DateBegin, DateEnd, PointRate, CountST, PenaltyToLate, Penalty
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(
                     int Id, 
-                    string Title, 
-                    System.DateTime DateBegin, 
-                    System.DateTime DateEnd, 
-                    double PointRate, 
-                    int CountST, 
-                    int PenaltyToLate, 
-                    int PenaltyToHold, 
-                    int PenaltyKp, 
-                    int PenaltyKS, 
+                    string Название_гонки, 
+                    System.DateTime Дата_начала, 
+                    System.DateTime Дата_окончания, 
+                    double Коэфф_очков, 
+                    int Кол_СУ, 
+                    int Штраф_за_опоздание, 
+                    int Штраф_за_задержку, 
+                    int Штраф_за_пропуск_КП, 
+                    int Штраф_за_пропуск_КС, 
                     int Original_Id, 
-                    string Original_Title, 
-                    System.DateTime Original_DateBegin, 
-                    System.DateTime Original_DateEnd, 
-                    double Original_PointRate, 
-                    int Original_CountST, 
-                    int Original_PenaltyToLate, 
-                    int Original_PenaltyToHold, 
-                    int Original_PenaltyKp, 
-                    int Original_PenaltyKS) {
+                    string Original_Название_гонки, 
+                    System.DateTime Original_Дата_начала, 
+                    System.DateTime Original_Дата_окончания, 
+                    double Original_Коэфф_очков, 
+                    int Original_Кол_СУ, 
+                    int Original_Штраф_за_опоздание, 
+                    int Original_Штраф_за_задержку, 
+                    int Original_Штраф_за_пропуск_КП, 
+                    int Original_Штраф_за_пропуск_КС) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Id));
-            if ((Title == null)) {
-                throw new global::System.ArgumentNullException("Title");
+            if ((Название_гонки == null)) {
+                throw new global::System.ArgumentNullException("Название_гонки");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Title));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Название_гонки));
             }
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(DateBegin));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(DateEnd));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((double)(PointRate));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(CountST));
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(PenaltyToLate));
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(PenaltyToHold));
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(PenaltyKp));
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(PenaltyKS));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(Дата_начала));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(Дата_окончания));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((double)(Коэфф_очков));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Кол_СУ));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Штраф_за_опоздание));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Штраф_за_задержку));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Штраф_за_пропуск_КП));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Штраф_за_пропуск_КС));
             this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_Id));
-            if ((Original_Title == null)) {
-                throw new global::System.ArgumentNullException("Original_Title");
+            if ((Original_Название_гонки == null)) {
+                throw new global::System.ArgumentNullException("Original_Название_гонки");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_Title));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_Название_гонки));
             }
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((System.DateTime)(Original_DateBegin));
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((System.DateTime)(Original_DateEnd));
-            this.Adapter.UpdateCommand.Parameters[14].Value = ((double)(Original_PointRate));
-            this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Original_CountST));
-            this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(Original_PenaltyToLate));
-            this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(Original_PenaltyToHold));
-            this.Adapter.UpdateCommand.Parameters[18].Value = ((int)(Original_PenaltyKp));
-            this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(Original_PenaltyKS));
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((System.DateTime)(Original_Дата_начала));
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((System.DateTime)(Original_Дата_окончания));
+            this.Adapter.UpdateCommand.Parameters[14].Value = ((double)(Original_Коэфф_очков));
+            this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Original_Кол_СУ));
+            this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(Original_Штраф_за_опоздание));
+            this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(Original_Штраф_за_задержку));
+            this.Adapter.UpdateCommand.Parameters[18].Value = ((int)(Original_Штраф_за_пропуск_КП));
+            this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(Original_Штраф_за_пропуск_КС));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -2656,26 +2783,26 @@ SELECT Id, Title, DateBegin, DateEnd, PointRate, CountST, PenaltyToLate, Penalty
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(
-                    string Title, 
-                    System.DateTime DateBegin, 
-                    System.DateTime DateEnd, 
-                    double PointRate, 
-                    int CountST, 
-                    int PenaltyToLate, 
-                    int PenaltyToHold, 
-                    int PenaltyKp, 
-                    int PenaltyKS, 
+                    string Название_гонки, 
+                    System.DateTime Дата_начала, 
+                    System.DateTime Дата_окончания, 
+                    double Коэфф_очков, 
+                    int Кол_СУ, 
+                    int Штраф_за_опоздание, 
+                    int Штраф_за_задержку, 
+                    int Штраф_за_пропуск_КП, 
+                    int Штраф_за_пропуск_КС, 
                     int Original_Id, 
-                    string Original_Title, 
-                    System.DateTime Original_DateBegin, 
-                    System.DateTime Original_DateEnd, 
-                    double Original_PointRate, 
-                    int Original_CountST, 
-                    int Original_PenaltyToLate, 
-                    int Original_PenaltyToHold, 
-                    int Original_PenaltyKp, 
-                    int Original_PenaltyKS) {
-            return this.Update(Original_Id, Title, DateBegin, DateEnd, PointRate, CountST, PenaltyToLate, PenaltyToHold, PenaltyKp, PenaltyKS, Original_Id, Original_Title, Original_DateBegin, Original_DateEnd, Original_PointRate, Original_CountST, Original_PenaltyToLate, Original_PenaltyToHold, Original_PenaltyKp, Original_PenaltyKS);
+                    string Original_Название_гонки, 
+                    System.DateTime Original_Дата_начала, 
+                    System.DateTime Original_Дата_окончания, 
+                    double Original_Коэфф_очков, 
+                    int Original_Кол_СУ, 
+                    int Original_Штраф_за_опоздание, 
+                    int Original_Штраф_за_задержку, 
+                    int Original_Штраф_за_пропуск_КП, 
+                    int Original_Штраф_за_пропуск_КС) {
+            return this.Update(Original_Id, Название_гонки, Дата_начала, Дата_окончания, Коэфф_очков, Кол_СУ, Штраф_за_опоздание, Штраф_за_задержку, Штраф_за_пропуск_КП, Штраф_за_пропуск_КС, Original_Id, Original_Название_гонки, Original_Дата_начала, Original_Дата_окончания, Original_Коэфф_очков, Original_Кол_СУ, Original_Штраф_за_опоздание, Original_Штраф_за_задержку, Original_Штраф_за_пропуск_КП, Original_Штраф_за_пропуск_КС);
         }
     }
     
