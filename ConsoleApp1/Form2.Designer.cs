@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.raceTabPage = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.raceDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,6 +47,15 @@
             this.raceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.database1DataSet = new ConsoleApp1.Database1DataSet();
             this.crewTabPage = new System.Windows.Forms.TabPage();
+            this.crewDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.crewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.crewTableAdapter = new ConsoleApp1.Database1DataSetTableAdapters.CrewTableAdapter();
             this.tableAdapterManager = new ConsoleApp1.Database1DataSetTableAdapters.TableAdapterManager();
@@ -63,31 +73,28 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.crewBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.crewDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button2 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.raceTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.raceDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.raceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
             this.crewTabPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.crewDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.crewBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.crewBindingNavigator)).BeginInit();
             this.crewBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.crewDataGridView)).BeginInit();
+            this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.raceTabPage);
             this.tabControl1.Controls.Add(this.crewTabPage);
+            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Location = new System.Drawing.Point(12, 28);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -97,6 +104,7 @@
             // raceTabPage
             // 
             this.raceTabPage.AutoScroll = true;
+            this.raceTabPage.Controls.Add(this.button1);
             this.raceTabPage.Controls.Add(this.raceDataGridView);
             this.raceTabPage.Location = new System.Drawing.Point(4, 25);
             this.raceTabPage.Name = "raceTabPage";
@@ -105,6 +113,16 @@
             this.raceTabPage.TabIndex = 0;
             this.raceTabPage.Text = "Гонка";
             this.raceTabPage.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(995, 361);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // raceDataGridView
             // 
@@ -127,6 +145,7 @@
             this.raceDataGridView.RowTemplate.Height = 24;
             this.raceDataGridView.Size = new System.Drawing.Size(1076, 395);
             this.raceDataGridView.TabIndex = 0;
+            this.raceDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.raceDataGridView_CellContentClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -208,6 +227,74 @@
             this.crewTabPage.TabIndex = 1;
             this.crewTabPage.Text = "Регистрация участников";
             this.crewTabPage.UseVisualStyleBackColor = true;
+            // 
+            // crewDataGridView
+            // 
+            this.crewDataGridView.AutoGenerateColumns = false;
+            this.crewDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.crewDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15,
+            this.dataGridViewTextBoxColumn17,
+            this.dataGridViewTextBoxColumn18,
+            this.dataGridViewTextBoxColumn19,
+            this.dataGridViewTextBoxColumn20,
+            this.dataGridViewTextBoxColumn21,
+            this.dataGridViewTextBoxColumn22});
+            this.crewDataGridView.DataSource = this.crewBindingSource;
+            this.crewDataGridView.Location = new System.Drawing.Point(6, 6);
+            this.crewDataGridView.Name = "crewDataGridView";
+            this.crewDataGridView.RowTemplate.Height = 24;
+            this.crewDataGridView.Size = new System.Drawing.Size(1076, 395);
+            this.crewDataGridView.TabIndex = 0;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "Стартовый номер";
+            this.dataGridViewTextBoxColumn14.HeaderText = "Стартовый номер";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "Водитель";
+            this.dataGridViewTextBoxColumn15.HeaderText = "Водитель";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "Город водителя";
+            this.dataGridViewTextBoxColumn17.HeaderText = "Город водителя";
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.DataPropertyName = "Штурман";
+            this.dataGridViewTextBoxColumn18.HeaderText = "Штурман";
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            this.dataGridViewTextBoxColumn19.DataPropertyName = "Город штурмана";
+            this.dataGridViewTextBoxColumn19.HeaderText = "Город штурмана";
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            // 
+            // dataGridViewTextBoxColumn20
+            // 
+            this.dataGridViewTextBoxColumn20.DataPropertyName = "Автомобиль";
+            this.dataGridViewTextBoxColumn20.HeaderText = "Автомобиль";
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            // 
+            // dataGridViewTextBoxColumn21
+            // 
+            this.dataGridViewTextBoxColumn21.DataPropertyName = "Зачетная группа";
+            this.dataGridViewTextBoxColumn21.HeaderText = "Зачетная группа";
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            // 
+            // dataGridViewTextBoxColumn22
+            // 
+            this.dataGridViewTextBoxColumn22.DataPropertyName = "Класс";
+            this.dataGridViewTextBoxColumn22.HeaderText = "Класс";
+            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
             // 
             // crewBindingSource
             // 
@@ -355,73 +442,36 @@
             this.crewBindingNavigatorSaveItem.Text = "Сохранить данные";
             this.crewBindingNavigatorSaveItem.Click += new System.EventHandler(this.crewBindingNavigatorSaveItem_Click);
             // 
-            // crewDataGridView
+            // tabPage1
             // 
-            this.crewDataGridView.AutoGenerateColumns = false;
-            this.crewDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.crewDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn14,
-            this.dataGridViewTextBoxColumn15,
-            this.dataGridViewTextBoxColumn17,
-            this.dataGridViewTextBoxColumn18,
-            this.dataGridViewTextBoxColumn19,
-            this.dataGridViewTextBoxColumn20,
-            this.dataGridViewTextBoxColumn21,
-            this.dataGridViewTextBoxColumn22});
-            this.crewDataGridView.DataSource = this.crewBindingSource;
-            this.crewDataGridView.Location = new System.Drawing.Point(6, 6);
-            this.crewDataGridView.Name = "crewDataGridView";
-            this.crewDataGridView.RowTemplate.Height = 24;
-            this.crewDataGridView.Size = new System.Drawing.Size(1076, 395);
-            this.crewDataGridView.TabIndex = 0;
+            this.tabPage1.Controls.Add(this.button2);
+            this.tabPage1.Controls.Add(this.dataGridView1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Size = new System.Drawing.Size(1088, 407);
+            this.tabPage1.TabIndex = 2;
+            this.tabPage1.Text = "Друзья";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // dataGridViewTextBoxColumn14
+            // dataGridView1
             // 
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "Стартовый номер";
-            this.dataGridViewTextBoxColumn14.HeaderText = "Стартовый номер";
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(758, 288);
+            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // dataGridViewTextBoxColumn15
+            // button2
             // 
-            this.dataGridViewTextBoxColumn15.DataPropertyName = "Водитель";
-            this.dataGridViewTextBoxColumn15.HeaderText = "Водитель";
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            // 
-            // dataGridViewTextBoxColumn17
-            // 
-            this.dataGridViewTextBoxColumn17.DataPropertyName = "Город водителя";
-            this.dataGridViewTextBoxColumn17.HeaderText = "Город водителя";
-            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
-            // 
-            // dataGridViewTextBoxColumn18
-            // 
-            this.dataGridViewTextBoxColumn18.DataPropertyName = "Штурман";
-            this.dataGridViewTextBoxColumn18.HeaderText = "Штурман";
-            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
-            // 
-            // dataGridViewTextBoxColumn19
-            // 
-            this.dataGridViewTextBoxColumn19.DataPropertyName = "Город штурмана";
-            this.dataGridViewTextBoxColumn19.HeaderText = "Город штурмана";
-            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
-            // 
-            // dataGridViewTextBoxColumn20
-            // 
-            this.dataGridViewTextBoxColumn20.DataPropertyName = "Автомобиль";
-            this.dataGridViewTextBoxColumn20.HeaderText = "Автомобиль";
-            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
-            // 
-            // dataGridViewTextBoxColumn21
-            // 
-            this.dataGridViewTextBoxColumn21.DataPropertyName = "Зачетная группа";
-            this.dataGridViewTextBoxColumn21.HeaderText = "Зачетная группа";
-            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
-            // 
-            // dataGridViewTextBoxColumn22
-            // 
-            this.dataGridViewTextBoxColumn22.DataPropertyName = "Класс";
-            this.dataGridViewTextBoxColumn22.HeaderText = "Класс";
-            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            this.button2.Location = new System.Drawing.Point(903, 299);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(159, 72);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Экспорт в эксель";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form2
             // 
@@ -439,11 +489,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.raceBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
             this.crewTabPage.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.crewDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.crewBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.crewBindingNavigator)).EndInit();
             this.crewBindingNavigator.ResumeLayout(false);
             this.crewBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.crewDataGridView)).EndInit();
+            this.tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -497,5 +549,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
